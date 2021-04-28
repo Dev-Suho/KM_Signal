@@ -7,12 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<% String pageChange;
+	%>
 	 <nav class="menu">	
 	<ul>
-		<li><a href="?page=newitem">학과 지원률</a></li>
-		<li><a href="">학과 취업률</a></li>
-		<li><a href="">수시 / 정시</a></li>
-		<li><a href="">학과 등록금 환불</a></li>
+		<li><a href="?pageChange=section.jsp">학과 지원률</a></li>
+		<li><a href="?pageChange=section1.jsp">학과 취업률</a></li>
+		<li><a href="?pageChange=section2.jsp">수시 / 정시</a></li>
+		<li><a href="?pageChange=section3.jsp">학과 등록금 환불</a></li>
 	</ul>
   	</nav>
 </body>

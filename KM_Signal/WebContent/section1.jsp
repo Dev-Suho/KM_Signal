@@ -7,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
 		<aside>
-			<p>학과 지원률 목록입니다.</p>
+			<p>학과 취업률 목록입니다.</p>
 		</aside>
 </body>
 </html>
