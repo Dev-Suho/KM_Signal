@@ -3,12 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>경민대학교 입시분석</title>
-<style>
-	ul { width:auto; overflow-x:scroll; white-space:nowrap;}
-	li {display:inline-block;}
-</style>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>경민대학교 입시분석</title>
+	<!-- 부트스트랩, 커스텀 CSS 추가하기 -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/custom.css">
+	<script
+	src="https://kit.fontawesome.com/2d323a629b.js"
+	crossorigin="anonymous"
+	></script>
+	<script src="./js/main.js" defer></script>
 </head>
 
 <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
@@ -92,21 +97,45 @@
 </script>
 <body>
 	<header>
-		<h1>
-		<img src = "https://ipsi.kcce.or.kr/file/UNIV_LOGO/2017_73007000_1493367019185.jpg" width = "100" height = "100">
-		<a href = "Main.jsp">KM-Signal</a>
-		</h1>
-		<hr>
+	<nav class="navbar">
+	  <div class="navbar_logo">
+		<img alt="" src="./image/KM_Main.jpg">
+		<a class="navbar-brand" href="Main.jsp">KM-Signal</a>
+	  </div>
+		<ul class="navbar_menu">
+		<li><a href="#">대학정보</a></li>
+		<li><a href="#">대학정보</a></li>
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          학과 정보
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a href="#">학과 지원률</a>
+          <a href="#">학과 취업률</a>
+          <a href="#">수시 / 정시 </a>
+          <a href="#">학과 등록금 환불 </a>
+        </div>
+        <li><a href="#">대학정보</a></li>
+		</ul>
+		<ul class ="navbar_icons">
+		<li><i>로그인</i></li>
+		<li><i>회원 가입</i></li>
+		</ul>
+		<a href="#" class="navbar_toogleBtn">
+		<i class="fas fa-bars"></i>
+		</a>
+	</nav>
 	</header>
 	<nav></nav>
+	<br><br><br><br><br>
 	<section>
 	<h1>대학 정보 대시보드</h1>
-	<ul>
+	<ul class = "employee">
 	<li><div id = "employee_piechart" style = "width :700px; height:500px;"></div></li>
 	<li><div id = "employee_piechart2" style = "width :700px; height:500px;"></div></li>
 	<li><div id = "employee_piechart3" style = "width :700px; height:500px;"></div></li>
 	</ul>
-	<h1>학과 정보 대시보드</h1>
+	<!--<h1>학과 정보 대시보드</h1>
 	<ul>
 	<li><div id = "dept_piechart" style = "width :700px; height:500px;"></div></li>
 	<li><div id = "dept_piechart2" style = "width :700px; height:500px;"></div></li>
@@ -114,7 +143,12 @@
 	<li><div id = "dept_piechart4" style = "width :700px; height:500px;"></div></li>
 	<li><div id = "dept_piechart5" style = "width :700px; height:500px;"></div></li>
 	<li><div id = "dept_piechart6" style = "width :700px; height:500px;"></div></li>
-	</ul>
+	</ul>-->
 	</section>
+	
+	<!-- 제이쿼리 자바스크립트 추가하기 -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/pooprer.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
