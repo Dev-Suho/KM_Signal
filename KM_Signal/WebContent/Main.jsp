@@ -11,90 +11,109 @@
 	<link rel="stylesheet" href="./css/custom.css">
 	<script
 	src="https://kit.fontawesome.com/2d323a629b.js"
-	crossorigin="anonymous"
 	></script>
 	<script src="./js/main.js" defer></script>
 </head>
 
 <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type = "text/javascript">
-	//Visualization API 및 corechart 패키지를 로드
-	google.load("visualization","1", {packages:["corechart"]});
-	//API가 로드될 때 실행할 콜백을 설정
-	google.setOnLoadCallback(drawChart);
-	google.setOnLoadCallback(drawChart2);
-	google.setOnLoadCallback(drawChart3);
-	google.setOnLoadCallback(drawChart4);
-	google.setOnLoadCallback(drawChart5);
-	google.setOnLoadCallback(drawChart6);
-	google.setOnLoadCallback(drawChart7);
-	google.setOnLoadCallback(drawChart8);
-	google.setOnLoadCallback(drawChart9);
-	function drawChart() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",13266],["합격자",9684],["등록자",1371]] );
-		var options = { title: "2021년 경민대학교 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("employee_piechart")); 
-		chart.draw(data, options); 
-	}
-	function drawChart2() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["일반고",8325],["특성화고",4236]] );
-		var options = { title: "2021년 학교 특성별 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("employee_piechart2")); 
-		chart.draw(data, options); 
-	}
-	function drawChart3() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["수시",9574],["정시",3733]] );
-		var options = { title: "2021년 경민대학교 지원종류" };
-		var chart = new google.visualization.PieChart(document.getElementById("employee_piechart3")); 
-		chart.draw(data, options); 
-	}
-	function drawChart4() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",182],["합격자",80],["등록자",35]] );
-		var options = { title: "2020년 융합소프트웨어 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart")); 
-		chart.draw(data, options); 
-	}
-	function drawChart5() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",200],["합격자",62],["등록자",37]] );
-		var options = { title: "2020년 정보통신과 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart2")); 
-		chart.draw(data, options); 
-	}
-	function drawChart6() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",230],["합격자",72],["등록자",42]] );
-		var options = { title: "2020년 국제비서과 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart3")); 
-		chart.draw(data, options); 
-	}
-	function drawChart7() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",326],["합격자",132],["등록자",32]] );
-		var options = { title: "2020년 유아교육과 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart4")); 
-		chart.draw(data, options); 
-	}
-	function drawChart8() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",352],["합격자",87],["등록자",40]]);
-		var options = { title: "2020년 보건의료행정과 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart5")); 
-		chart.draw(data, options); 
-	}
-	function drawChart9() 
-	{ 
-		var data = google.visualization.arrayToDataTable( [["KM","Registration"],["지원자",524],["합격자",169],["등록자",37]] );
-		var options = { title: "2020년 간호학과 지원율" };
-		var chart = new google.visualization.PieChart(document.getElementById("dept_piechart6")); 
-		chart.draw(data, options); 
-	}
-</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', '지원자', '합격자','등록자'],
+          ['2017', 16176, 6300, 1855],
+          ['2018', 14424, 5163, 1633],
+          ['2019', 16624, 6530, 1819],
+          ['2020', 13457, 5662, 1442],
+          ['2021', 13266, 5441, 1408]
+        ]);
+
+        var options = {
+          chart: {
+            title: '경민대 입시 현황',
+            subtitle: '지원자, 합격자, 등록자 2017년~2021년',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+	<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['서월',     11],
+          ['경기도',      2],
+          ['강원도',  2],
+          ['충청북도', 2],
+          ['충청남도',    7],
+          ['경상북도',    7],
+          ['경상남도',    7],
+          ['전라북도',    7],
+          ['전라남도',    7]
+        ]);
+
+        var options = {
+          title: '지역별 지원 현황'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['일반고',     11],
+          ['특성화고',      2],
+          ['특목고',  2],
+          ['자율고', 2]
+        ]);
+
+        var options = {
+          title: '학교별 지원 현황',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart4'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['수시',     11],
+          ['정시',      2]
+        ]);
+
+        var options = {
+          title: '수시 / 정시',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart5'));
+        chart.draw(data, options);
+      }
+	</script>
 <body>
 	<header>
 	<nav class="navbar">
@@ -129,22 +148,35 @@
 	<nav></nav>
 	<br><br><br><br><br>
 	<section>
-	<h1>대학 정보 대시보드</h1>
-	<ul class = "employee">
-	<li><div id = "employee_piechart" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "employee_piechart2" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "employee_piechart3" style = "width :700px; height:500px;"></div></li>
-	</ul>
-	<!--<h1>학과 정보 대시보드</h1>
-	<ul>
-	<li><div id = "dept_piechart" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "dept_piechart2" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "dept_piechart3" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "dept_piechart4" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "dept_piechart5" style = "width :700px; height:500px;"></div></li>
-	<li><div id = "dept_piechart6" style = "width :700px; height:500px;"></div></li>
-	</ul>-->
+	<table border="1">
+	<th align ="center"><h1>대학 전체 입시정보</h1></th>
+	<th align ="center"><h1>학과 자원률</h1><a href="department.jsp">이동</a></th>
+	<tr>
+		<td>
+			<div id="barchart_material" style="width: 700px; height: 400px;"></div>
+		</td>
+		<td>
+			<%@ include file = "successful.jsp" %>
+		</td>
+	</tr>
+	</table>
+	<hr>
+	<table border="1">
+	<th align ="center"><h1>학교 특성별 지원율</h1></th>
+	<th align ="center"><h1>지원 종류별(수시 / 정시)</h1></th>
+	<tr>
+		<td>
+			<div id="donutchart4" style="width: 700px; height: 400px;"></div>
+		</td>
+		<td>
+			<div id="donutchart5" style="width: 700px; height: 400px;"></div>
+		</td>
+	</tr>
+	</table>
+	<h1>지역별 지원 현황</h1>
+	<div id="piechart" style="width: 700px; height: 400px;"></div>
 	</section>
+	<a href="#">클릭</a>
 	
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>

@@ -21,11 +21,7 @@ body{
 	background-color: #263343;
 	padding: 8px 12px;
 }
-a{
-	font-family: 'Jeju Gothic';
-	text-decoration: none;
-	color: white;
-}
+
 .navbar_logo{
 	font-size:24px;
 	color: white;
@@ -55,7 +51,7 @@ a{
 	padding-right: 0;
 }
 .navbar_icons li{
-	padding: 8px 0px;
+	padding: 8px 12px;
 
 }
 .navbar_toogleBtn{
