@@ -19,6 +19,7 @@
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<!-- 대학 전체 입시 정보 차트 -->
 	<script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -46,6 +47,7 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
+    <!-- 지역별 지원 현황 차트 -->
 	<script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -74,6 +76,7 @@
         chart.draw(data, options);
       }
     </script>
+    <!-- 학교별 지원 현황 차트 -->
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
@@ -95,6 +98,7 @@
         chart.draw(data, options);
       }
     </script>
+    <!-- 대학 지원 종류 수시/정시 현황 차트 -->
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
@@ -156,6 +160,7 @@
 			<div id="barchart_material" style="width: 700px; height: 400px;"></div>
 		</td>
 		<td>
+			<!-- 학과 지원률 현황 차트 -->
 			<%@ include file = "successful.jsp" %>
 		</td>
 	</tr>
@@ -176,7 +181,6 @@
 	<h1>지역별 지원 현황</h1>
 	<div id="piechart" style="width: 700px; height: 400px;"></div>
 	</section>
-	<a href="#">클릭</a>
 	
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>
