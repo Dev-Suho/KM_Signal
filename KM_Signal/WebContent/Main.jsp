@@ -13,6 +13,9 @@
 	src="https://kit.fontawesome.com/2d323a629b.js"
 	></script>
 	<script src="./js/main.js" defer></script>
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	
 </head>
 
 <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
@@ -36,8 +39,7 @@
 
         var options = {
           chart: {
-            title: '경민대 입시 현황',
-            subtitle: '지원자, 합격자, 등록자 2017년~2021년',
+        	  title: '지원자, 합격자, 등록자 2017년~2021년',
           },
           bars: 'horizontal' // Required for Material Bar Charts.
         };
@@ -119,6 +121,7 @@
       }
 	</script>
 <body>
+
 	<header>
 	<nav class="navbar">
 	  <div class="navbar_logo">
@@ -149,42 +152,146 @@
 		</a>
 	</nav>
 	</header>
-	<nav></nav>
+	<main class="container text-center">
+  <div class="bg-light p-5 rounded">
+    <h1>경민대학교 입시 홈페이지</h1>
+   
+  </div>
+</main>
 	<br><br><br><br><br>
 	<section>
-	<table border="1">
-	<th align ="center"><h1>대학 전체 입시정보</h1></th>
-	<th align ="center"><h1>학과 자원률</h1><a href="department.jsp">이동</a></th>
-	<tr>
-		<td>
-			<div id="barchart_material" style="width: 700px; height: 400px;"></div>
-		</td>
-		<td>
-			<!-- 학과 지원률 현황 차트 -->
-			<%@ include file = "successful.jsp" %>
-		</td>
-	</tr>
-	</table>
+	<div class="container mt-5">
+		<div class = "row">
+			<div class="col">
+				<div class="card">
+				  <div class="card-header">
+				    <h1>경민대 입시 현황</h1>
+				  </div>
+				  <div class="card-body">
+				   <div id="barchart_material" style="width: 600px; height: 400px;"></div>			
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+			<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th scope="col"><h2>#</h2></th>
+			      <th scope="col"><h2>지원자</h2></th>
+			      <th scope="col"><h2>합격자</h2></th>
+			      <th scope="col"><h2>등록자</h2></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row"><h1>2017</h1></th>
+			      <td><h3>16176명</h3></td>
+			      <td><h3>6300명</h3></td>
+			      <td><h3>1855명</h3></td>
+			    </tr>
+			    <tr>
+			      <th scope="row"><h1>2018</h1></th>
+			      <td><h3>14424명</h3></td>
+			      <td><h3>5163명</h3></td>
+			      <td><h3>1633명</h3></td>			     
+			    </tr>
+			    <tr>
+			      <th scope="row"><h1>2019</h1></th>
+			      <td><h3>16624명</h3></td>
+			      <td><h3>6530명</h3></td>
+			      <td><h3>1819명</h3></td>
+			    </tr>
+			     <tr>
+			      <th scope="row"><h1>2020</h1></th>
+			      <td><h3>13457명</h3></td>
+			      <td><h3>5662명</h3></td>
+			      <td><h3>1442명</h3></td>
+			    </tr>
+			     <tr>
+			      <th scope="row"><h1>2021</h1></th>
+			      <td><h3>13266명</h3></td>
+			      <td><h3>5441명</h3></td>
+			      <td><h3>1408명</h3></td>
+			    </tr>
+			  </tbody>
+			</table>
+			</div>  
+	</div>
 	<hr>
-	<table border="1">
-	<th align ="center"><h1>학교 특성별 지원율</h1></th>
-	<th align ="center"><h1>지원 종류별(수시 / 정시)</h1></th>
-	<tr>
-		<td>
-			<div id="donutchart4" style="width: 700px; height: 400px;"></div>
-		</td>
-		<td>
-			<div id="donutchart5" style="width: 700px; height: 400px;"></div>
-		</td>
-	</tr>
-	</table>
-	<h1>지역별 지원 현황</h1>
-	<div id="piechart" style="width: 700px; height: 400px;"></div>
+	<div class="container mt-5 text-center"> 
+		<div class = "row">
+			<div class="col">
+			<div class="card">
+ 			 <div class="card-header">
+   				<h1>학교 특성별 지원율</h1>
+  			</div>
+	  		<div class="card-body">
+			    <div id="donutchart4" style="height: 300px;"></div> 
+			    <a href="#" class="btn btn-primary">이동</a>  
+	 		 </div>
+			</div>
+			</div>
+			<div class="col">
+			<div class="card">
+ 			 <div class="card-header">
+   				 <h1>지원 종류별(수시 / 정시)</h1>
+  			</div>
+	  		<div class="card-body">
+			    <div id="donutchart5" style="height: 300px;"></div>
+			    <a href="#" class="btn btn-primary">이동</a>
+	 		 </div>
+			</div>
+			</div>
+			<div class="col">
+			<div class="card">
+		 <div class="card-header">
+   				 <h1>지역별 지원 현황</h1>
+   			</div>
+   			<div class="card-body">
+  					<div id="piechart" style="height: 300px;"></div>
+  					<a href="#" class="btn btn-primary">지도보러가기</a>
+  			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container mt-5 text-center">
+	<div class = "row">
+	<div class="col">
+		<div class="card">
+  			 <div class="card-header">
+   				 <h1>경민대 학과 종류</h1>
+   				 
+   				 </div>
+  				<div class="card-body">
+  					<%@ include file = "successful.jsp" %> 
+  					<a href="#" class="btn btn-primary">이동</a>
+  			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+		
+			
+		</div>		
 	</section>
 	
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/pooprer.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
 </body>
 </html>

@@ -146,28 +146,28 @@
 				<li>
 					<a>
 						<label for="slide04" class="left"></label>
-						<div id="donutchart" style="width: 900px; height: 500px;"></div>
+						<div id="donutchart" style="width: 620px; height: 400px;"></div>
 						<label for="slide02" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide01" class="left"></label>
-						<div id="donutchart1" style="width: 900px; height: 500px;"></div>
+						<div id="donutchart1" style="width: 620px; height: 400px;"></div>
 						<label for="slide03" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide02" class="left"></label>
-						<div id="donutchart2" style="width: 900px; height: 500px;"></div>
+						<div id="donutchart2" style="width: 620px; height: 400px;"></div>
 						<label for="slide04" class="right"></label>
 					</a>
 				</li>
 				<li>
 					<a>
 						<label for="slide03" class="left"></label>
-						<div id="donutchart3" style="width: 900px; height: 500px;"></div>
+						<div id="donutchart3" style="width: 620px; height: 400px;"></div>
 						<label for="slide01" class="right"></label>
 					</a>
 				</li>

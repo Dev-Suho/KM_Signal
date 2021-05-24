@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
 	<title>상세 페이지</title>	
 </head>
 <body>
