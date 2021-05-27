@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<style>
+	<style>
 	/* 브라우저 마진과 패딩 리셋 */
 	* {margin:0;padding:0;}
 	
-	/* INPUT 가리기 */
+	/* INPUT 가리기 */ㅇ
 	.section input[id*="slide"] {display:none;}
 
 	/* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/

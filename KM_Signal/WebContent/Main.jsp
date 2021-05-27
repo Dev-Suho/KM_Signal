@@ -266,7 +266,7 @@
    				 </div>
   				<div class="card-body">
   					<%@ include file = "successful.jsp" %> 
-  					<a href="#" class="btn btn-primary">이동</a>
+  					<a href="./department.jsp" class="btn btn-primary">이동</a>
   			</div>
 		</div>
 	</div>
