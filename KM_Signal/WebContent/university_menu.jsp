@@ -20,7 +20,7 @@
           </ul>
         </li>
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?pageChange=university_menu_3.jsp">정시 / 수시 지원현황</a>
+          <a class="nav-link active" aria-current="page" href="?pageChange=university_menu_3.jsp">정시 / 수시 총지원현황</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="?pageChange=university_menu_4.jsp">입학 정보 경로</a>
@@ -28,8 +28,8 @@
         
       </ul>
             <span class="navbar-text">
-        <a href="Main.jsp">메인 홈페이지 이동</a>
-      </span>
+       		 	<a href="Main.jsp">메인 홈페이지 이동</a>
+      		</span>
       </div>
 	
 </body>

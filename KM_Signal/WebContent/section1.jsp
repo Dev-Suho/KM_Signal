@@ -8,133 +8,150 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-	<div id="carouselExampleControls" class="carousel slide" data-interval="false">
-  		<div class="carousel-inner">
-    		<div class="carousel-item active">
-      			<div style = "width:800px; height: 400px;">
-     				<canvas id = "myChart"></canvas>
-    		 	</div> 
-    		</div>
-    		<div class="carousel-item">
-      			<div style = "width:800px;">
-     				<canvas id = "myChart1"></canvas>
-    		 	</div> 
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart2"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart3"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart4"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart5"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart6"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart7"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart8"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart9"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart10"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart11"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart12"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart13"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart14"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart15"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart16"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart17"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart18"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart19"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart20"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart21"></canvas>
-    		 	</div>
-    		</div>
-    		<div class="carousel-item">
-     		 	<div style = "width:800px;">
-     				<canvas id = "myChart22"></canvas>
-    		 	</div>
-    		</div>
-  		</div>
-  		<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    		<img alt="" src="./image/left.png" style="width:80px;">
-    		<span class="visually-hidden">Previous</span>
-  		</button>
-  		<button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-   			<img alt="" src="./image/right.png" style="width:80px;">
-    		<span class="visually-hidden">Next</span>
-  		</button>
+	<div class="container mt-5 text-center"> 
+		<div class = "row">
+			<div class="col">
+			<div class="card">
+ 			 <div class="card-header">
+   				<h1 style="text-center">학과 취업률<a href="#" class="btn btn-primary" style="float:right;">지도 이동</a></h1>
+  			</div>
+  			<div class="card-body" style="height: 700px;">
+			    <p class="card-text">
+					<div id="carouselExampleControls" class="carousel slide" data-interval="false">
+  						<div class="carousel-inner">
+    						<div class="carousel-item active">
+      							<div style = "width:1250px; height: 900px;">
+     								<canvas id = "myChart"></canvas>
+    		 					</div> 
+    						</div>
+				    		<div class="carousel-item">
+				      			<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart1"></canvas>
+				    		 	</div> 
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart2"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart3"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart4"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart5"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart6"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart7"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart8"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart9"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart10"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart11"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart12"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart13"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart14"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart15"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart16"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart17"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart18"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart19"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart20"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart21"></canvas>
+				    		 	</div>
+				    		</div>
+				    		<div class="carousel-item">
+				     		 	<div style = "width:1250px; height: 900px;">
+				     				<canvas id = "myChart22"></canvas>
+				    		 	</div>
+				    		</div>
+				  		</div>
+  		<!-- 슬라이드 오른쪽, 왼쪽 버튼 -->
+  						<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    						<img alt="" src="./image/left.png" style="width:80px;">
+    						<span class="visually-hidden">Previous</span>
+  						</button>
+  						<button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+   							<img alt="" src="./image/right.png" style="width:80px;">
+    						<span class="visually-hidden">Next</span>
+  						</button>
+	   				</div>
+	   			</div>
+			  </p> 
+	 		</div>
+	 			<div class="card-footer text-muted">2 days ago</div>
+		</div>
 	</div>
+</div>
 				
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	

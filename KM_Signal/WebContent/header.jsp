@@ -5,14 +5,30 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
   </head>
   <body>
-    <h1>학과 상세 페이지</h1>
+  	<% String pageChange; %>
+		<div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      		<li class="nav-item active">
+          <a class="nav-link active" aria-current="page" href="?pageChange=section.jsp">학과 지원률</a>
+        	</li>
+         <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="?pageChange=section1.jsp">학과 취업률</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="?pageChange=section2.jsp">수시 / 정시</a>
+        </li>    
+      </ul>
+            <span class="navbar-text">
+       		 	<a href="Main.jsp">메인 홈페이지 이동</a>
+      		</span>
+      </div>
+
 	
     <!-- Optional JavaScript; choose one of the two! -->
 

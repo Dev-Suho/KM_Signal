@@ -10,7 +10,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style1.css" />
 	<title>상세 페이지</title>	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
@@ -23,24 +22,21 @@
 			select = "section1.jsp";
 		}
 	%>
-	<div>
-	<header>
-		<%@ include file = "header.jsp"%>
-	</header>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container-fluid">
+	  	<a class="navbar-brand" href="#">학과 상세페이지</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<%@ include file = "header.jsp"%>
+	  	</div>
+	 </nav>
 	<main class="container text-center">
  		<div class="bg-light p-5 rounded">
-    		<h1>경민대학교 입시 홈페이지</h1>  
+    		<h1>경민대학교 입시 상세페이지</h1>  
   		</div>
 	</main>
-	<section name = center>
-		<table>
-			<tr>
-				<td><%@ include file = "menu.jsp" %></td>
-				<td class ="text-center"><jsp:include page="<%=select %>" flush="false" /></td>
-			</tr>
-		</table>
-	</section>
+			<jsp:include page="<%=select %>" flush="false" />
 	
 	
 	
