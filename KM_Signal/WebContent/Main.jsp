@@ -28,7 +28,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <body>
 	<header>
-	<nav class="navbar">
+	<nav class="navbar" style="background-color: #B4D8E7;">
 	  <div class="navbar_logo">
 		<img alt="" src="./image/KM_Main.jpg">
 		<a class="navbar-brand" href="Main.jsp">KM-Signal</a>
@@ -407,7 +407,6 @@
   			</div>
   			</div>
 		</div>
-	</div>
 	</div>
 	</div>
 	</div>
