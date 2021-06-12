@@ -5,15 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
 		<div class="container mt-5 text-center"> 
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header">
-   				<h1 style="text-center">수시 / 정시 총지원현황
-   				<a href="department.jsp?pageChange=section2.jsp" class="btn btn-primary" style="float:right;">학과별 지원현황</a></h1>
+ 			 <div class="card-header bg-info">
+   				<h1 style="text-center">연도별 지원 비율</h1>
+   				
   			</div>
 	  		<div class="card-body" style="height:700px;  margin: 0 auto;">
 			    <p class="card-text">
@@ -57,7 +58,7 @@
 			    </p> 
 	 		 </div>
 	 		   	<div class="card-footer text-muted">
-	 		   	2017년~2021년
+	 		   	<a href="department.jsp?pageChange=section2.jsp" class="btn btn-secondary" style="float:right; margin: 0 auto;">학과별 지원현황 보러가기</a>
   				</div>
 			</div>
 			</div>
@@ -65,18 +66,21 @@
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
+$.getJSON("resources/university_attribute.json", function(data) {
+	const labels = Object.values(data.attribute);
+	const datas = Object.values(data.Y2017);
 	const context = document.getElementById('myChart').getContext('2d');
 	const myChart = new Chart(context, {
-	type : 'doughnut',
+	type : 'pie',
 	
 	data: {
-		labels:['수시','정시'],
+		labels:labels,
 		datasets: [{
 			label: '지원자',
 			lineTension : 0.1,
-			data: ['151','211'],
-			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-				'rgb(255, 205, 86)'
+			data: datas,
+			backgroundColor: ["#FF8B8B",
+				'#61BFAD'
 			    ],
 			    hoverOffset: 4
 		}]
@@ -84,24 +88,29 @@
 	options: {
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2017년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_attribute.json", function(data) {
+	const labels = Object.values(data.attribute);
+	const datas = Object.values(data.Y2018);
 	const context1 = document.getElementById('myChart1').getContext('2d');
 	const myChart1 = new Chart(context1, {
-	type : 'doughnut',
-	
-	data: {
-		labels:['수시','정시'],
-		datasets: [{
-			label: '지원자',
-			lineTension : 0.1,
-			data: ['151','211'],
-			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-				'rgb(255, 205, 86)'
+		type : 'pie',
+		
+		data: {
+			labels:labels,
+			datasets: [{
+				label: '지원자',
+				lineTension : 0.1,
+				data: datas,
+			backgroundColor: ["#FF8B8B",
+				'#61BFAD'
 			    ],
 			    hoverOffset: 4
 		}]
@@ -109,24 +118,29 @@
 	options: {
 		title:{
 			display: true,
-			text:'2017년도'
+			fontSize: 30,
+			text:'2018년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_attribute.json", function(data) {
+	const labels = Object.values(data.attribute);
+	const datas = Object.values(data.Y2019);
 	const context2 = document.getElementById('myChart2').getContext('2d');
 	const myChart2 = new Chart(context2, {
-	type : 'doughnut',
-	
-	data: {
-		labels:['수시','정시'],
-		datasets: [{
-			label: '지원자',
-			lineTension : 0.1,
-			data: ['151','211'],
-			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-				'rgb(255, 205, 86)'
+		type : 'pie',
+		
+		data: {
+			labels:labels,
+			datasets: [{
+				label: '지원자',
+				lineTension : 0.1,
+				data: datas,
+			backgroundColor: ["#FF8B8B",
+				'#61BFAD'
 			    ],
 			    hoverOffset: 4
 		}]
@@ -134,24 +148,29 @@
 	options: {
 		title:{
 			display: true,
-			text:'2017년도'
+			fontSize: 30,
+			text:'2019년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_attribute.json", function(data) {
+	const labels = Object.values(data.attribute);
+	const datas = Object.values(data.Y2020);
 	const context3 = document.getElementById('myChart3').getContext('2d');
 	const myChart3 = new Chart(context3, {
-	type : 'doughnut',
-	
-	data: {
-		labels:['수시','정시'],
-		datasets: [{
-			label: '지원자',
-			lineTension : 0.1,
-			data: ['151','211'],
-			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-				'rgb(255, 205, 86)'
+		type : 'pie',
+		
+		data: {
+			labels:labels,
+			datasets: [{
+				label: '지원자',
+				lineTension : 0.1,
+				data: datas,
+			backgroundColor: ["#FF8B8B",
+				'#61BFAD'
 			    ],
 			    hoverOffset: 4
 		}]
@@ -159,24 +178,29 @@
 	options: {
 		title:{
 			display: true,
-			text:'2017년도'
+			fontSize: 30,
+			text:'2020년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_attribute.json", function(data) {
+	const labels = Object.values(data.attribute);
+	const datas = Object.values(data.Y2021);
 	const context4 = document.getElementById('myChart4').getContext('2d');
 	const myChart4 = new Chart(context4, {
-	type : 'doughnut',
-	
-	data: {
-		labels:['수시','정시'],
-		datasets: [{
-			label: '지원자',
-			lineTension : 0.1,
-			data: ['151','211'],
-			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-				'rgb(255, 205, 86)'
+		type : 'pie',
+		
+		data: {
+			labels:labels,
+			datasets: [{
+				label: '지원자',
+				lineTension : 0.1,
+				data: datas,
+			backgroundColor: ["#FF8B8B",
+				'#61BFAD'
 			    ],
 			    hoverOffset: 4
 		}]
@@ -184,10 +208,12 @@
 	options: {
 		title:{
 			display: true,
-			text:'2017년도'
+			fontSize: 30,
+			text:'2021년도'
 		}
 	}
 	});
+});
 </script>
 </body>
 </html>

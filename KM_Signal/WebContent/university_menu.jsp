@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            지역/학교
+            지원 현황
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="?pageChange=university_menu_1.jsp">지역별 지원현황</a></li>
@@ -20,7 +20,7 @@
           </ul>
         </li>
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?pageChange=university_menu_3.jsp">정시 / 수시 총지원현황</a>
+          <a class="nav-link active" aria-current="page" href="?pageChange=university_menu_3.jsp">연도별 지원 비율</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="?pageChange=university_menu_4.jsp">입학 정보 경로</a>

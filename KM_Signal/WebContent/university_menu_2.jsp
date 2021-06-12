@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header">
+ 			 <div class="card-header bg-info">
    				<h1 style="text-center">학교별 지원 현황</h1>
   			</div>
 	  		<div class="card-body" style="height: 700px;">
@@ -65,114 +65,203 @@
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
+$.getJSON("resources/university_school.json", function(data){
+	const labels = Object.values(data.highSchool);
+	const datas = Object.values(data.Y2017);
 	const context = document.getElementById('myChart').getContext('2d');
 	const myChart = new Chart(context, {
 	type : 'bar',
 	
 	data: {
-		labels:['일반고','특성화고','특목고','자율고'],
+		labels:labels,
 		datasets: [{
-			label: '지원자',
+			label: '일반고',
 			lineTension : 0.1,
-			data: ['151','211','151','131'],
-			backgroundColor: "rgba(255, 99, 132, 0.2)"
+			data: datas,
+			backgroundColor: ['rgba(255, 99, 132, 0.2)',
+			'rgba(54, 162, 235, 0.5)',
+			'rgba(255, 206, 86, 0.5)',
+			'rgba(75, 192, 192, 0.5)'
+			],
+			borderColor: ['rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.5)',
+				'rgba(255, 206, 86, 0.5)',
+				'rgba(75, 192, 192, 0.5)'
+				],
+			hoverOffset: 4
 		}]
 	},
 	options: {
+		legend: {
+        	display: false
+        },
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2017년도'
 		}
 	}
 	});
+	});
 </script>
 <script>
+$.getJSON("resources/university_school.json", function(data){
+	const labels = Object.values(data.highSchool);
+	const datas = Object.values(data.Y2018);
 	const context1 = document.getElementById('myChart1').getContext('2d');
 	const myChart1 = new Chart(context1, {
 	type : 'bar',
 	
 	data: {
-		labels:['일반고','특성화고','특목고','자율고'],
+		labels:labels,
 		datasets: [{
-			label: '지원자',
+			label: '일반고',
 			lineTension : 0.1,
-			data: ['151','211','151','131'],
-			backgroundColor: "rgba(255, 99, 132, 0.2)"
+			data: datas,
+			backgroundColor: ['rgba(255, 99, 132, 0.2)',
+			'rgba(54, 162, 235, 0.5)',
+			'rgba(255, 206, 86, 0.5)',
+			'rgba(75, 192, 192, 0.5)'
+			],
+			borderColor: ['rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.5)',
+				'rgba(255, 206, 86, 0.5)',
+				'rgba(75, 192, 192, 0.5)'
+				],
+			hoverOffset: 4
 		}]
 	},
 	options: {
+		legend: {
+        	display: false
+        },
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2018년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_school.json", function(data){
+	const labels = Object.values(data.highSchool);
+	const datas = Object.values(data.Y2019);
 	const context2 = document.getElementById('myChart2').getContext('2d');
 	const myChart2 = new Chart(context2, {
 	type : 'bar',
 	
 	data: {
-		labels:['일반고','특성화고','특목고','자율고'],
+		labels:labels,
 		datasets: [{
-			label: '지원자',
+			label: '일반고',
 			lineTension : 0.1,
-			data: ['151','211','151','131'],
-			backgroundColor: "rgba(255, 99, 132, 0.2)"
+			data: datas,
+			backgroundColor: ['rgba(255, 99, 132, 0.2)',
+			'rgba(54, 162, 235, 0.5)',
+			'rgba(255, 206, 86, 0.5)',
+			'rgba(75, 192, 192, 0.5)'
+			],
+			borderColor: ['rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.5)',
+				'rgba(255, 206, 86, 0.5)',
+				'rgba(75, 192, 192, 0.5)'
+				],
+			hoverOffset: 4
 		}]
 	},
 	options: {
+		legend: {
+        	display: false
+        },
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2019년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_school.json", function(data){
+	const labels = Object.values(data.highSchool);
+	const datas = Object.values(data.Y2020);
 	const context3 = document.getElementById('myChart3').getContext('2d');
 	const myChart3 = new Chart(context3, {
 	type : 'bar',
 	
 	data: {
-		labels:['일반고','특성화고','특목고','자율고'],
+		labels:labels,
 		datasets: [{
-			label: '지원자',
+			label: '일반고',
 			lineTension : 0.1,
-			data: ['151','211','151','131'],
-			backgroundColor: "rgba(255, 99, 132, 0.2)"
+			data: datas,
+			backgroundColor: ['rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.5)',
+				'rgba(255, 206, 86, 0.5)',
+				'rgba(75, 192, 192, 0.5)'
+				],borderColor: ['rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.5)',
+					'rgba(255, 206, 86, 0.5)',
+					'rgba(75, 192, 192, 0.5)'
+					],
+				hoverOffset: 4			
 		}]
 	},
 	options: {
+		legend: {
+        	display: false
+        },
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2020년도'
 		}
 	}
 	});
+});
 </script>
 <script>
+$.getJSON("resources/university_school.json", function(data){
+	const labels = Object.values(data.highSchool);
+	const datas = Object.values(data.Y2021);
 	const context4 = document.getElementById('myChart4').getContext('2d');
 	const myChart4 = new Chart(context4, {
 	type : 'bar',
 	
 	data: {
-		labels:['일반고','특성화고','특목고','자율고'],
+		labels:labels,
 		datasets: [{
-			label: '지원자',
+			label: '일반고',
 			lineTension : 0.1,
-			data: ['151','211','151','131'],
-			backgroundColor: "rgba(255, 99, 132, 0.2)"
+			data: datas,
+			backgroundColor: ['rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.5)',
+				'rgba(255, 206, 86, 0.5)',
+				'rgba(75, 192, 192, 0.5)'
+				],
+				borderColor: ['rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.5)',
+					'rgba(255, 206, 86, 0.5)',
+					'rgba(75, 192, 192, 0.5)'
+					],
+				hoverOffset: 4
 		}]
 	},
 	options: {
+		legend: {
+        	display: false
+        },
 		title:{
 			display: true,
+			fontSize: 30,
 			text:'2021년도'
 		}
 	}
 	});
+});
 </script>
 </body>
 </html>

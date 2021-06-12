@@ -16,7 +16,7 @@
 			select = "university_menu_1.jsp";
 		}
 	%>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">대학 세부 페이지</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
     </div>
 </nav>
 	<main class="container text-center">
- 		<div class="bg-light p-5 rounded">
+ 		<div class="bg-light p-3 rounded" style="backgroundcolor:red";>
     		<h1>경민대학교 대학 세부페이지</h1>  
   		</div>
 	</main>
