@@ -13,7 +13,7 @@
 			<div class="col">
 			<div class="card">
  			 <div class="card-header">
-   				<h1 style="text-center">수시 /정시<a href="#" class="btn btn-primary" style="float:right;">지도 이동</a></h1>
+   				<h1 style="text-center">&nbsp;&nbsp;&nbsp;&nbsp;수시 / 정시<a href="#" class="btn btn-primary" style="float:right;">지도 이동</a></h1>
   			</div>
   			<div class="card-body" style="height: 700px;">
 			    <p class="card-text">
