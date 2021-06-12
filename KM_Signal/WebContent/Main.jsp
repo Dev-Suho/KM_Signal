@@ -8,7 +8,7 @@
 	<title>경민대학교 입시분석</title>
 	<!-- 부트스트랩, 커스텀 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/custom.css">
+		<link rel="stylesheet" href="./css/custom.css">
 	<script
 	src="https://kit.fontawesome.com/2d323a629b.js"
 	></script>
@@ -19,85 +19,9 @@
 <script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	<!-- 대학 전체 입시 정보 차트 -->
-	<script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>	
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', '지원자', '합격자','등록자'],
-          ['2017', 16176, 6300, 1855],
-          ['2018', 14424, 5163, 1633],
-          ['2019', 16624, 6530, 1819],
-          ['2020', 13457, 5662, 1442],
-          ['2021', 13266, 5441, 1408]
-        ]);
 
-        var options = {
-          chart: {
-        	  title: '지원자, 합격자, 등록자 2017년~2021년',
-          },
-          bars: 'horizontal' // Required for Material Bar Charts.
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-    <!-- 지역별 지원 현황 차트 -->
-	<script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['서월',     11],
-          ['경기도',      2],
-          ['강원도',  2],
-          ['충청북도', 2],
-          ['충청남도',    7],
-          ['경상북도',    7],
-          ['경상남도',    7],
-          ['전라북도',    7],
-          ['전라남도',    7]
-        ]);
-
-        var options = {
-          title: '지역별 지원 현황'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-    <!-- 학교별 지원 현황 차트 -->
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['일반고',     11],
-          ['특성화고',      2],
-          ['특목고',  2],
-          ['자율고', 2]
-        ]);
-
-        var options = {
-          title: '학교별 지원 현황',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart4'));
-        chart.draw(data, options);
-      }
-    </script>
     <!-- 대학 지원 종류 수시/정시 현황 차트 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
@@ -112,16 +36,6 @@
 		<ul class="navbar_menu">
 		<li><a href="#">대학정보</a></li>
 		<li><a href="#">대학정보</a></li>
-		<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          학과 정보
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a href="#">학과 지원률</a>
-          <a href="#">학과 취업률</a>
-          <a href="#">수시 / 정시 </a>
-          <a href="#">학과 등록금 환불 </a>
-        </div>
         <li><a href="#">대학정보</a></li>
 		</ul>
 		<ul class ="navbar_icons">
@@ -143,11 +57,57 @@
 		<div class = "row">
 			<div class="col">
 				<div class="card">
-				  <div class="card-header">
+				  <div class="card-header text-center">
 				    <h1>경민대 입시 현황</h1>
 				  </div>
 				  <div class="card-body">
-				   <div id="barchart_material" style="width: 1000px; height: 400px;"></div>			
+				   	<canvas id="myChart3" width="600" height="350"></canvas>
+				   	<script>
+				   	$.getJSON("resources/examination.json", function(data) {
+				   	const labels = Object.values(data.examination);
+				   	const datas1 = Object.values(data.a1);
+				   	const datas2 = Object.values(data.a2);
+				   	const datas3 = Object.values(data.a3);
+			        const context3 = document.getElementById('myChart3').getContext('2d');
+			        const myChart3 = new Chart(context3, {
+			        		  type: 'horizontalBar',
+			        		  data: {
+			        		    labels: labels,
+			        		    datasets: [
+			        		      {
+			        		        data: datas1,
+			        		        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+			        		        label: '지원자'
+			        		        
+			        		      },
+			        		      {
+			        		        data: datas2,
+			        		        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+			        		        label: '합격자'
+			        		        	
+			        		      },
+			        		      {
+				        		        data: datas3,
+				        		        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+				        		        label: '등록자'
+				        		     
+				        		  },
+				        		  
+			        		    ]
+			        		  },
+			        		  options: {
+			        			  responsive: false,
+			        		    scales: {
+			        		      xAxes: [{
+			        		        ticks: {
+			        		          beginAtZero: true
+			        		        }
+			        		      }]
+			        		    }
+			        		  }
+			        		});
+				   	});
+			        </script>
 				  </div>
 				</div>
 			</div>
@@ -274,8 +234,8 @@
 			        $.getJSON("resources/volunteer_attribute.json", function(data) {
 			        	const labels = Object.values(data.attribute);
 			        	const datas = Object.values(data.y_twenty_one);
-			        const context = document.getElementById('myChart').getContext('2d');
-			        const myChart = new Chart(context, {
+			        	const context = document.getElementById('myChart').getContext('2d');
+			        	const myChart = new Chart(context, {
 			        	type : 'doughnut',
 			        	
 			        	data: {
@@ -372,31 +332,31 @@
 			    $.getJSON("resources/volunteer_area.json", function(data) {
 			    	const labels = Object.values(data.area);
 			    	const datas = Object.values(data.y_twenty_one);
-				const context1 = document.getElementById('myChart1').getContext('2d');
-				const myChart1 = new Chart(context1, {
-				type : 'bar',
-				
-				data: {
-					labels:labels,
-					datasets: [{
-						label: '지원자',
-						lineTension : 0.1,
-						data: datas,
-						backgroundColor: "rgba(255, 99, 132, 0.2)"
-					}]
-				},
-				options: {
-					responsive: false,
-					title:{
-						display: true,
+					const context1 = document.getElementById('myChart1').getContext('2d');
+					const myChart1 = new Chart(context1, {
+					type : 'bar',
+					
+					data: {
+						labels:labels,
+						datasets: [{
+							label: '지원자',
+							lineTension : 0.1,
+							data: datas,
+							backgroundColor: "rgba(255, 99, 132, 0.2)"
+						}]
+					},
+					options: {
+						responsive: false,
+						title:{
+							display: true,
+						}
 					}
-				}
-				});
-			    });
-			        </script>
-  					<a href="#" class="btn btn-primary">지도보러가기</a>
-  			</div>
-		</div>
+					});
+				    });
+				        </script>
+	  					<a href="#" class="btn btn-primary">이동</a>
+  					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -409,15 +369,49 @@
    				 <h1>경민대 학과 종류</h1>
    				 </div>
   				<div class="card-body">
-  					<%@ include file = "successful.jsp" %> 
+  				<canvas id="myChart7" width="400" height="300"></canvas>
+				<script>
+					$.getJSON("resources/json_test.json", function(data) {
+					const labels = Object.values(data.department);
+					const volunteerData = Object.values(data.volunteer);
+					const acceptanceData = Object.values(data.acceptance);	
+					const registerData = Object.values(data.register);
+					
+					const context7 = document.getElementById('myChart7').getContext('2d');
+					const myChart7 = new Chart(context7, {
+						type : 'bar',
+						data : {
+							labels : labels,
+							datasets : [{
+								label : '지원자',
+								lineTension : 0.1,
+								data : volunteerData,
+								backgroundColor : "rgba(255, 99, 132, 0.2)"
+							}, {
+								label : '합격자',
+								lineTension : 0.1,
+								data : acceptanceData,
+								backgroundColor : "rgba(54, 162, 235, 0.2)"
+							}, {
+								label : '등록자',
+								lineTension : 0.1,
+								data : registerData,
+								backgroundColor : "rgba(255, 206, 86, 0.2)"
+							}]
+						}
+					
+					});
+				});
+				</script>
   					<a href="./department.jsp" class="btn btn-primary">이동</a>
+  			</div>
   			</div>
 		</div>
 	</div>
 	</div>
 	</div>
 	</div>
-		</div>
+		
 	</section>
 	
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
