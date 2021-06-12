@@ -110,23 +110,9 @@
 		<a class="navbar-brand" href="Main.jsp">KM-Signal</a>
 	  </div>
 		<ul class="navbar_menu">
-		<li><a href="#">대학정보</a></li>
-		<li><a href="#">대학정보</a></li>
-		<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          학과 정보
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a href="#">학과 지원률</a>
-          <a href="#">학과 취업률</a>
-          <a href="#">수시 / 정시 </a>
-          <a href="#">학과 등록금 환불 </a>
-        </div>
-        <li><a href="#">대학정보</a></li>
-		</ul>
-		<ul class ="navbar_icons">
-		<li><i>로그인</i></li>
-		<li><i>회원 가입</i></li>
+		<li><a href="index.html">대학정보</a></li>
+		<li><a href="university.jsp">대학 상세정보</a></li>
+		<li><a href="department.jsp">학과 상세정보</a></li>
 		</ul>
 		<a href="#" class="navbar_toogleBtn">
 		<i class="fas fa-bars"></i>
@@ -408,8 +394,41 @@
   			 <div class="card-header">
    				 <h1>경민대 학과 종류</h1>
    				 </div>
+   				 <div style = "width:800px"> <canvas id = "myChart"></canvas>
+   				 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   				<div class="card-body">
-  					<%@ include file = "successful.jsp" %> 
+  					<script>
+	$.getJSON("resources/volunteer_information_2021.json", function(data) {
+	const labels = Object.values(data.department);
+	const volunteerData = Object.values(data.volunteer);
+	const acceptanceData = Object.values(data.acceptance);	
+	const registerData = Object.values(data.register);
+	
+	const context = document.getElementById('myChart').getContext('2d');
+	const myChart = new Chart(context, {
+		type : 'bar',
+		data : {
+			labels : labels,
+			datasets : [{
+				label : '지원자',
+				lineTension : 0.1,
+				data : volunteerData,
+				backgroundColor : "rgba(255, 99, 132, 0.2)"
+			}, {
+				label : '합격자',
+				lineTension : 0.1,
+				data : acceptanceData,
+				backgroundColor : "rgba(54, 162, 235, 0.2)"
+			}, {
+				label : '등록자',
+				lineTension : 0.1,
+				data : registerData,
+				backgroundColor : "rgba(255, 206, 86, 0.2)"
+			}]
+		}
+	});
+});
+</script>
   					<a href="./department.jsp" class="btn btn-primary">이동</a>
   			</div>
 		</div>
@@ -424,15 +443,8 @@
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/pooprer.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
-	<!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    -->
 </body>
 </html>
