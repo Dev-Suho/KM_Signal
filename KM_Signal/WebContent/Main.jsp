@@ -9,9 +9,7 @@
 	<!-- 부트스트랩, 커스텀 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 		<link rel="stylesheet" href="./css/custom.css">
-	<script
-	src="https://kit.fontawesome.com/2d323a629b.js"
-	></script>
+	<script src="https://kit.fontawesome.com/2d323a629b.js"></script>
 	<script src="./js/main.js" defer></script>
 	<!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -78,7 +76,7 @@
 			        		        data: datas1,
 			        		        backgroundColor: 'rgba(255, 99, 132, 0.2)',
 			        		        label: '지원자'
-			        		        
+			        		       
 			        		      },
 			        		      {
 			        		        data: datas2,
