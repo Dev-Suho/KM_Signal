@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header bg-info">
+ 			 <div class="card-header" style = "background-color : #b4d8e7;">
    				<h1 style="text-center">지역별 지원 현황</h1>
   			</div>
 	  		<div class="card-body" style="height: 700px;">
@@ -56,14 +56,16 @@
 	   </div>
 			    </p> 
 	 		 </div>
-	 		   	<div class="card-footer text-muted">
-   				<a href="#" class="btn btn-secondary" style="float:right;">지도 이동</a>
+	 		   	<div class="card-footer text-muted">대학입시 상세 분석
   				</div>
 			</div>
 			</div>
 		</div>
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+	
 <script>
 $.getJSON("resources/university_area.json", function(data){
 	const labels = Object.values(data.area);
@@ -78,18 +80,26 @@ $.getJSON("resources/university_area.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["#6E86FF",
-				'#74DB8A',
-				'#DB4F57',
-				'#55CBCD',
-				'#4053FA',
-				'#F0C22B',
-				'#97C1A9'
+			backgroundColor: ["rgba(255, 155, 55, 0.3)",
+				"rgba(5, 5, 255, 0.3)",
+				"rgba(55, 255, 55, 0.3)",
+				"rgba(255, 0, 0, 0.3)",
+				"rgba(55, 25, 155, 0.3)",
+				"rgba(105, 105, 105, 0.3)",
+				"rgba(155, 55, 55, 0.3)"
 			    ],
 			    hoverOffset: 4
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -116,18 +126,26 @@ $.getJSON("resources/university_area.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["#6E86FF",
-				'#74DB8A',
-				'#DB4F57',
-				'#55CBCD',
-				'#4053FA',
-				'#F0C22B',
-				'#97C1A9'
+			backgroundColor: ["rgba(255, 155, 55, 0.3)",
+				"rgba(5, 5, 255, 0.3)",
+				"rgba(55, 255, 55, 0.3)",
+				"rgba(255, 0, 0, 0.3)",
+				"rgba(55, 25, 155, 0.3)",
+				"rgba(105, 105, 105, 0.3)",
+				"rgba(155, 55, 55, 0.3)"
 			    ],
 			    hoverOffset: 4
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -154,18 +172,26 @@ $.getJSON("resources/university_area.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["#6E86FF",
-				'#74DB8A',
-				'#DB4F57',
-				'#55CBCD',
-				'#4053FA',
-				'#F0C22B',
-				'#97C1A9'
+			backgroundColor: ["rgba(255, 155, 55, 0.3)",
+				"rgba(5, 5, 255, 0.3)",
+				"rgba(55, 255, 55, 0.3)",
+				"rgba(255, 0, 0, 0.3)",
+				"rgba(55, 25, 155, 0.3)",
+				"rgba(105, 105, 105, 0.3)",
+				"rgba(155, 55, 55, 0.3)"
 			    ],
 			    hoverOffset: 4
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -192,18 +218,26 @@ $.getJSON("resources/university_area.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["#6E86FF",
-				'#74DB8A',
-				'#DB4F57',
-				'#55CBCD',
-				'#4053FA',
-				'#F0C22B',
-				'#97C1A9'
+			backgroundColor: ["rgba(255, 155, 55, 0.3)",
+				"rgba(5, 5, 255, 0.3)",
+				"rgba(55, 255, 55, 0.3)",
+				"rgba(255, 0, 0, 0.3)",
+				"rgba(55, 25, 155, 0.3)",
+				"rgba(105, 105, 105, 0.3)",
+				"rgba(155, 55, 55, 0.3)"
 			    ],
 			    hoverOffset: 4
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -230,18 +264,26 @@ $.getJSON("resources/university_area.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["#6E86FF",
-				'#74DB8A',
-				'#DB4F57',
-				'#55CBCD',
-				'#4053FA',
-				'#F0C22B',
-				'#97C1A9'
+			backgroundColor: ["rgba(255, 155, 55, 0.3)",
+				"rgba(5, 5, 255, 0.3)",
+				"rgba(55, 255, 55, 0.3)",
+				"rgba(255, 0, 0, 0.3)",
+				"rgba(55, 25, 155, 0.3)",
+				"rgba(105, 105, 105, 0.3)",
+				"rgba(155, 55, 55, 0.3)"
 			    ],
 			    hoverOffset: 4
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },

@@ -12,8 +12,8 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header">
-   				<h1 style="text-center">학과 취업률<a href="#" class="btn btn-primary" style="float:right;">지도 이동</a></h1>
+ 			 <div class="card-header" style = "background-color : #b4d8e7;">
+   				<h1 style="text-center">학과 취업률</h1>
   			</div>
   			<div class="card-body" style="height: 700px;">
 			    <p class="card-text">
@@ -148,13 +148,14 @@
 	   			</div>
 			  </p> 
 	 		</div>
-	 			<div class="card-footer text-muted">2 days ago</div>
+	 			<div class="card-footer text-muted">학과별 상세 분석</div>
 		</div>
 	</div>
 </div>
 				
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 	<script>
 		$.getJSON("resources/department_employment.json",
 				function(data) {
@@ -177,6 +178,15 @@
 							} ]
 						},
 						options : {
+							plugins : {
+								datalabels : {
+									align : 'end',
+									font : {
+										weight : 'bold',
+										size : 20
+									}
+								}
+							} ,			
 							title : {
 								display : true,
 								text : '인문사회계열 취업률'
@@ -206,6 +216,15 @@
 					} ]
 				},
 				options : {
+					plugins : {
+						datalabels : {
+							align : 'end',
+							font : {
+								weight : 'bold',
+								size : 20
+							}
+						}
+					} ,	
 					title : {
 						display : true,
 						text : '인문사회계열 취업률'
@@ -234,6 +253,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -262,6 +290,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -290,6 +327,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -318,6 +364,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -346,6 +401,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -374,6 +438,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -402,6 +475,15 @@
 				} ]
 			},
 			options : {
+				plugins : {
+					datalabels : {
+						align : 'end',
+						font : {
+							weight : 'bold',
+							size : 20
+						}
+					}
+				} ,	
 				title : {
 					display : true,
 					text : '인문사회계열 취업률'
@@ -460,6 +542,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '자연과학계열 취업률'
@@ -490,6 +581,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '자연과학계열 취업률'
@@ -520,6 +620,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '자연과학계열 취업률'
@@ -550,6 +659,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -610,6 +728,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -640,6 +767,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -670,6 +806,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -700,6 +845,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -730,6 +884,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -760,6 +923,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '공학 계열 취업률'
@@ -790,6 +962,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '예체능계열 취업률'
@@ -820,6 +1001,15 @@
 						} ]
 					},
 					options : {
+						plugins : {
+							datalabels : {
+								align : 'end',
+								font : {
+									weight : 'bold',
+									size : 20
+								}
+							}
+						} ,	
 						title : {
 							display : true,
 							text : '예체능계열 취업률'

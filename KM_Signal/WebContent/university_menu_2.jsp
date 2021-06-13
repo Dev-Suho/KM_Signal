@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header bg-info">
+ 			 <div class="card-header" style = "background-color : #b4d8e7;">
    				<h1 style="text-center">학교별 지원 현황</h1>
   			</div>
 	  		<div class="card-body" style="height: 700px;">
@@ -57,13 +57,15 @@
 			    </p> 
 	 		 </div>
 	 		   	<div class="card-footer text-muted">
-   				 2 days ago
+   				 대학입시 상세 분석
   				</div>
 			</div>
 			</div>
 		</div>
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <script>
 $.getJSON("resources/university_school.json", function(data){
 	const labels = Object.values(data.highSchool);
@@ -92,6 +94,14 @@ $.getJSON("resources/university_school.json", function(data){
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -132,6 +142,14 @@ $.getJSON("resources/university_school.json", function(data){
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -172,6 +190,14 @@ $.getJSON("resources/university_school.json", function(data){
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -211,6 +237,14 @@ $.getJSON("resources/university_school.json", function(data){
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },
@@ -251,6 +285,14 @@ $.getJSON("resources/university_school.json", function(data){
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		legend: {
         	display: false
         },

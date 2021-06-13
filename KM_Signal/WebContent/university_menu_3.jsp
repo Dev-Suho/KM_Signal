@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header bg-info">
+ 			 <div class="card-header" style = "background-color : #b4d8e7;">
    				<h1 style="text-center">연도별 지원 비율</h1>
    				
   			</div>
@@ -21,27 +21,27 @@
 			    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
   					<div class="carousel-inner">
     					<div class="carousel-item active text-center">
-      						<div style = "width:600px; height: 600px;">
+      						<div style = "width:1280px; height: 900px;">
      							<canvas id = "myChart"></canvas>
     		 				</div> 
     					</div>
     				<div class="carousel-item text-center">
-      					<div style = "width:600px; height: 600px;">
+      					<div style = "width:1280px; height: 900px;">
      						<canvas id = "myChart1"></canvas>
     		 			</div> 
     				</div>
 			    	<div class="carousel-item text-center">
-      					<div style = "width:600px; height: 600px;">
+      					<div style = "width:1280px; height: 900px;">
      						<canvas id = "myChart2"></canvas>
     		 			</div> 
     				</div>
     				<div class="carousel-item text-center">
-      					<div style = "width:600px; height: 600px;">
+      					<div style = "width:1280px; height: 900px;">
      						<canvas id = "myChart3"></canvas>
     		 			</div> 
     				</div>
     				<div class="carousel-item text-center">
-      					<div style = "width:600px; height: 600px;">
+      					<div style = "width:1280px; height: 900px;">
      						<canvas id = "myChart4"></canvas>
     		 			</div> 
     				</div>
@@ -57,7 +57,7 @@
 	   </div>
 			    </p> 
 	 		 </div>
-	 		   	<div class="card-footer text-muted">
+	 		   	<div class="card-footer text-muted text-center">
 	 		   	<a href="department.jsp?pageChange=section2.jsp" class="btn btn-secondary" style="float:right; margin: 0 auto;">학과별 지원현황 보러가기</a>
   				</div>
 			</div>
@@ -65,6 +65,8 @@
 		</div>
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <script>
 $.getJSON("resources/university_attribute.json", function(data) {
 	const labels = Object.values(data.attribute);
@@ -86,6 +88,14 @@ $.getJSON("resources/university_attribute.json", function(data) {
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		title:{
 			display: true,
 			fontSize: 30,
@@ -116,6 +126,14 @@ $.getJSON("resources/university_attribute.json", function(data) {
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		title:{
 			display: true,
 			fontSize: 30,
@@ -146,6 +164,14 @@ $.getJSON("resources/university_attribute.json", function(data) {
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		title:{
 			display: true,
 			fontSize: 30,
@@ -176,6 +202,14 @@ $.getJSON("resources/university_attribute.json", function(data) {
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		title:{
 			display: true,
 			fontSize: 30,
@@ -206,6 +240,14 @@ $.getJSON("resources/university_attribute.json", function(data) {
 		}]
 	},
 	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
 		title:{
 			display: true,
 			fontSize: 30,

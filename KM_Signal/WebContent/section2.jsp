@@ -12,8 +12,8 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header">
-   				<h1 style="text-center">&nbsp;&nbsp;&nbsp;&nbsp;수시 / 정시<a href="#" class="btn btn-primary" style="float:right;">지도 이동</a></h1>
+ 			 <div class="card-header" style = "background-color : #b4d8e7;">
+   				<h1 style="text-center">수시 / 정시 비율</h1>
   			</div>
   			<div class="card-body" style="height: 700px;">
 			    <p class="card-text">
@@ -148,12 +148,14 @@
 	   			</div>
 			  </p> 
 	 		</div>
-	 			<div class="card-footer text-muted">2 days ago</div>
+	 			<div class="card-footer text-muted" >학과별 상세 분석</div>
 		</div>
 	</div>
 </div>
 				
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <script>
 	$.getJSON("resources/department_volunteer_attribute1.json",
 			function(data1) {
@@ -188,6 +190,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '국제비서과'
@@ -232,6 +243,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '보건의료행정과'
@@ -276,6 +296,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '사회복지과'
@@ -320,6 +349,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '세무회계과'
@@ -364,6 +402,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '아동미술지도과'
@@ -408,6 +455,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '아동보육과'
@@ -452,6 +508,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '유아교육과'
@@ -496,6 +561,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '호텔관광경영과'
@@ -540,6 +614,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '효충사관과'
@@ -584,6 +667,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '뷰티케어과'
@@ -627,6 +719,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '호텔외식조리과'
@@ -670,6 +771,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '간호학과'
@@ -713,6 +823,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '호텔외식서비스과'
@@ -756,6 +875,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '융합소프트웨어과'
@@ -799,6 +927,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '정보통신과'
@@ -842,6 +979,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : 'IT경영과'
@@ -885,6 +1031,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '게임콘텐츠과'
@@ -928,6 +1083,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '공간디자인과'
@@ -971,6 +1135,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '건축과'
@@ -1014,6 +1187,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '소방안전관리과'
@@ -1057,6 +1239,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '영상콘텐츠과'
@@ -1100,6 +1291,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '공연예술과'
@@ -1143,6 +1343,15 @@
 									} ]
 								},
 								options : {
+									plugins : {
+										datalabels : {
+											align : 'end',
+											font : {
+												weight : 'bold',
+												size : 18
+											}
+										}
+									} ,	
 									title : {
 										display : true,
 										text : '레포츠태권도과'

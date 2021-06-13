@@ -34,6 +34,7 @@ body{
 	color: #d49466;
 }
 .navbar_menu{
+	text-align : center;
 	display: flex;
 	list-style: none;
 	padding-left: 0;
