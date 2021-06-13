@@ -167,7 +167,7 @@
 			<div class="col">
 			<div class="card">
  			 <div class="card-header">
-   				<h1>학교 특성별 지원율</h1>
+   				<h1>학교 특성별 지원자</h1>
   			</div>
 	  		<div class="card-body">
 			    <canvas id="myChart2" width="350" height="310"></canvas>
@@ -185,10 +185,10 @@
 			        			label: '지원자',
 			        			lineTension : 0.1,
 			        			data: datas,
-			        			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-			        				'rgb(255, 205, 86)',
-			        				'rgb(255, 186, 110)',
-			        				'rgb(255, 220, 190)'
+			        			backgroundColor: ["rgba(255, 55, 55, 0.2)",
+			        				'rgba(255, 71, 66, 0.7)',
+			        				'rgba(55, 205, 86, 0.3)',
+			        				'rgba(55, 104, 250, 0.3)'
 			        				],
 			        				hoverOffset: 4
 			        				}]
@@ -215,8 +215,6 @@
 			                         });
 			                         let percentage = (value * 100 / sum).toFixed(2) + "%";
 			                         return percentage;
-
-			                     
 			                       },
 			                       color: '#fff',
 			                            }
@@ -249,8 +247,8 @@
 			        			label: '지원자',
 			        			lineTension : 0.1,
 			        			data: datas,
-			        			backgroundColor: ["rgba(255, 99, 132, 0.2)",
-			        				'rgb(255, 205, 86)'
+			        			backgroundColor: ["rgba(255, 55, 55, 0.3)",
+			        				'rgba(55, 104, 250, 0.3)'
 			        				],
 			        				hoverOffset: 4
 			        				}]
@@ -345,9 +343,15 @@
 						labels:labels,
 						datasets: [{
 							label: '지원자',
-							lineTension : 0.1,
+							lineTension : 1,
 							data: datas,
-							backgroundColor: "rgba(255, 99, 132, 0.2)"
+							backgroundColor: ["rgba(255, 102, 102, 0.3)",
+								  			  "rgba(51, 0, 255, 0.3)",
+								  			  "rgba(0, 255, 51, 0.3)", 
+								  			  "rgba(55, 152, 255, 0.3)",
+								  			  "rgba(255, 152, 0, 0.3)",
+								  			  "rgba(155, 252, 255, 0.3)",
+								  			  "rgba(155, 55, 105, 0.3)"]
 						}]
 					},
 					options: {

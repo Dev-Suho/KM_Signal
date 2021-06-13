@@ -26,13 +26,13 @@
     </div>
 </nav>
 	<main class="container text-center">
- 		<div class="bg-light p-3 rounded" style="backgroundcolor:red";>
-    		<h1>경민대학교 대학 세부페이지</h1>  
-  		</div>
+		<div class="bg-light p-3 rounded" style="backgroundcolor: red";>
+			<h1>경민대학교 대학 세부페이지</h1>
+		</div>
 	</main>
 	<jsp:include page="<%=select %>" flush="false" />
-		
-	
+
+
 	<!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
