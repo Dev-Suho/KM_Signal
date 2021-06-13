@@ -48,7 +48,7 @@
 	</header>
 	<main class="container text-center">
   <div class="bg-light p-5 rounded">
-    <h1>경민대학교 입시 홈페이지</h1>
+    <h1>경민대학교 입시 홈페이지1</h1>
   </div>
 </main>
 	<section>
