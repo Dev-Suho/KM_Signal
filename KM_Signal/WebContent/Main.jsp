@@ -154,17 +154,17 @@
 			</table>
 			</div>  
 	</div>
-	<hr>
-	<div class="container mt-5 text-center"> 
-		<div class = "row">
-			<div class="col">
-			<div class="card">
- 			 <div class="card-header">
-   				<h1>학교 특성별 지원자</h1>
-  			</div>
-	  		<div class="card-body">
-			    <canvas id="myChart2" width="350" height="310"></canvas>
-			        <script>
+			<hr>
+			<div class="container mt-5 text-center">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h1>학교 특성별 지원자</h1>
+							</div>
+							<div class="card-body">
+								<canvas id="myChart2" width="350" height="310"></canvas>
+								<script>
 			        $.getJSON("resources/school_attribute.json", function(data) {
 			        	const labels = Object.values(data.attribute);
 			        	const datas = Object.values(data.y_twenty_one);
@@ -215,18 +215,18 @@
 			           };
 			        });
 			        </script>
-			    <a href="university.jsp" class="btn btn-primary">이동</a>  
-	 		 </div>
-			</div>
-			</div>
-			<div class="col">
-			<div class="card">
- 			 <div class="card-header">
-   				 <h2>지원 종류별(수시/정시)</h2>
-  			</div>
-	  		<div class="card-body">
-			        <canvas id="myChart" width="350" height="310"></canvas>
-			        <script>
+								<a href="university.jsp" class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h2>지원 종류별(수시/정시)</h2>
+							</div>
+							<div class="card-body">
+								<canvas id="myChart" width="350" height="310"></canvas>
+								<script>
 			        $.getJSON("resources/volunteer_attribute.json", function(data) {
 			        	const labels = Object.values(data.attribute);
 			        	const datas = Object.values(data.y_twenty_one);
@@ -277,18 +277,18 @@
 			           };
 			        });
 			        </script>
-			    <a href="university.jsp" class="btn btn-primary">이동</a>
-	 		 </div>
-			</div>
-			</div>
-			<div class="col">
-			<div class="card">
-		 <div class="card-header">
-   				 <h1>지역별 지원 현황</h1>
-   			</div>
-   			<div class="card-body">
-   			<canvas id="myChart1" width="400" height="300"></canvas>
-			        <script>
+								<a href="university.jsp" class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h1>지역별 지원 현황</h1>
+							</div>
+							<div class="card-body">
+								<canvas id="myChart1" width="400" height="300"></canvas>
+								<script>
 			        var data = [{
 			            labels: ['서울','경기도','강원도','경상도','전라도','충청도','광역시','제주도'],
 			            backgroundColor: [
@@ -356,14 +356,14 @@
 					});
 				    });
 				        </script>
-	  					<a href="#" class="btn btn-primary">이동</a>
-  					</div>
+								<a href="#" class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="container mt-5 text-center">
+
+			<div class="container mt-5 text-center">
 	<div class = "row">
 	<div class="col">
 		<div class="card">
