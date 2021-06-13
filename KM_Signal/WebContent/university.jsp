@@ -3,11 +3,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>university</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/2d323a629b.js"></script>
+	<script src="./js/main.js" defer></script>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/2d323a629b.js"></script>
+	<script src="./js/main.js" defer></script>
 	 <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
+<script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>	
+
+
+    <!-- 대학 지원 종류 수시/정시 현황 차트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <body>
 	<%
 		String select = request.getParameter("pageChange");
@@ -16,7 +33,7 @@
 			select = "university_menu_1.jsp";
 		}
 	%>
-	<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B4D8E7;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">대학 세부 페이지</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +43,15 @@
     </div>
 </nav>
 	<main class="container text-center">
-		<div class="bg-light p-3 rounded" style="backgroundcolor: red";>
-			<h1>경민대학교 대학 세부페이지</h1>
-		</div>
+ 		<div class="bg-light p-3 rounded">
+    		<h1>경민대학교 대학 세부페이지</h1>  
+  		</div>
 	</main>
 	<jsp:include page="<%=select %>" flush="false" />
-
-
+		
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/pooprer.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
 	<!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

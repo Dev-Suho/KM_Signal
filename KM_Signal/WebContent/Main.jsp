@@ -9,7 +9,9 @@
 	<!-- 부트스트랩, 커스텀 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 		<link rel="stylesheet" href="./css/custom.css">
-	<script src="https://kit.fontawesome.com/2d323a629b.js"></script>
+	<script
+	src="https://kit.fontawesome.com/2d323a629b.js"
+	></script>
 	<script src="./js/main.js" defer></script>
 	<!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -32,13 +34,12 @@
 		<a class="navbar-brand" href="Main.jsp">KM-Signal</a>
 	  </div>
 		<ul class="navbar_menu">
-		<li><a href="#">대학정보</a></li>
-		<li><a href="#">대학정보</a></li>
-        <li><a href="#">대학정보</a></li>
+		<li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>
+		<li><a href="department.jsp">학과정보</a></li>
 		</ul>
 		<ul class ="navbar_icons">
-		<li><i>로그인</i></li>
-		<li><i>회원 가입</i></li>
+		<li><i></i></li>
+		<li><i></i></li>
 		</ul>
 		<a href="#" class="navbar_toogleBtn">
 		<i class="fas fa-bars"></i>
@@ -76,7 +77,7 @@
 			        		        data: datas1,
 			        		        backgroundColor: 'rgba(255, 99, 132, 0.2)',
 			        		        label: '지원자'
-			        		       
+			        		        
 			        		      },
 			        		      {
 			        		        data: datas2,
@@ -110,7 +111,7 @@
 				</div>
 			</div>
 			<div class="col">
-			<table class="table table-striped">
+			<table class="table table-striped text-center">
 			  <thead>
 			    <tr>
 			      <th scope="col"><h2>년도별</h2></th>
@@ -119,52 +120,58 @@
 			      <th scope="col"><h2>등록자</h2></th>
 			    </tr>
 			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row"><h1>2017</h1></th>
-			      <td><h3>16176명</h3></td>
-			      <td><h3>6300명</h3></td>
-			      <td><h3>1855명</h3></td>
-			    </tr>
-			    <tr>
-			      <th scope="row"><h1>2018</h1></th>
-			      <td><h3>14424명</h3></td>
-			      <td><h3>5163명</h3></td>
-			      <td><h3>1633명</h3></td>			     
-			    </tr>
-			    <tr>
-			      <th scope="row"><h1>2019</h1></th>
-			      <td><h3>16624명</h3></td>
-			      <td><h3>6530명</h3></td>
-			      <td><h3>1819명</h3></td>
-			    </tr>
-			     <tr>
-			      <th scope="row"><h1>2020</h1></th>
-			      <td><h3>13457명</h3></td>
-			      <td><h3>5662명</h3></td>
-			      <td><h3>1442명</h3></td>
-			    </tr>
-			     <tr>
-			      <th scope="row"><h1>2021</h1></th>
-			      <td><h3>13266명</h3></td>
-			      <td><h3>5441명</h3></td>
-			      <td><h3>1408명</h3></td>
-			    </tr>
+			  <tbody id = "target">
+			   
 			  </tbody>
 			</table>
 			</div>  
 	</div>
-			<hr>
-			<div class="container mt-5 text-center">
-				<div class="row">
-					<div class="col">
-						<div class="card">
-							<div class="card-header">
-								<h1>학교 특성별 지원자</h1>
-							</div>
-							<div class="card-body">
-								<canvas id="myChart2" width="350" height="310"></canvas>
-								<script>
+				        <script type="text/javascript">
+				        var target = $('#target');
+			       		$.getJSON("resources/examination.json", function(data) {
+			        	const labels = Object.values(data.examination);
+			        	const datas1 = Object.values(data.a1);
+			        	const datas2 = Object.values(data.a2);
+			        	const datas3 = Object.values(data.a3);
+			        	
+			        	for(i=0;i<labels.length; i++){
+			        		
+			        	
+			        	var add_data ='';
+			        	add_data += '<tr>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+labels[i]+'</h4>';
+						add_data += '</td>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+datas1[i]+ '명'+'</h4>';
+						add_data += '</td>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+datas2[i]+ '명'+'</h4>';
+						add_data += '</td>';
+						
+						add_data += '<td>';
+						add_data += '<h4>'+datas3[i]+ '명'+'</h4>';
+						add_data += '</td>';
+
+						add_data += '</tr>';
+						target.append(add_data);
+			        	}
+			        });
+			        	</script>
+	<hr>
+	<div class="container mt-5 text-center"> 
+		<div class = "row">
+			<div class="col">
+			<div class="card">
+ 			 <div class="card-header">
+   				<h1>학교 특성별 지원율</h1>
+  			</div>
+	  		<div class="card-body">
+			    <canvas id="myChart2" width="350" height="310"></canvas>
+			        <script>
 			        $.getJSON("resources/school_attribute.json", function(data) {
 			        	const labels = Object.values(data.attribute);
 			        	const datas = Object.values(data.y_twenty_one);
@@ -178,10 +185,10 @@
 			        			label: '지원자',
 			        			lineTension : 0.1,
 			        			data: datas,
-			        			backgroundColor: ["rgba(255, 55, 55, 0.2)",
-			        				'rgba(255, 71, 66, 0.7)',
-			        				'rgba(55, 205, 86, 0.3)',
-			        				'rgba(55, 104, 250, 0.3)'
+			        			backgroundColor: ["rgba(255, 99, 132, 0.2)",
+			        				'rgb(255, 205, 86)',
+			        				'rgb(255, 186, 110)',
+			        				'rgb(255, 220, 190)'
 			        				],
 			        				hoverOffset: 4
 			        				}]
@@ -208,6 +215,8 @@
 			                         });
 			                         let percentage = (value * 100 / sum).toFixed(2) + "%";
 			                         return percentage;
+
+			                     
 			                       },
 			                       color: '#fff',
 			                            }
@@ -215,18 +224,18 @@
 			           };
 			        });
 			        </script>
-								<a href="university.jsp" class="btn btn-primary">이동</a>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card">
-							<div class="card-header">
-								<h2>지원 종류별(수시/정시)</h2>
-							</div>
-							<div class="card-body">
-								<canvas id="myChart" width="350" height="310"></canvas>
-								<script>
+			    <a href="university.jsp?pageChange=university_menu_2.jsp" class="btn btn-primary">이동</a>  
+	 		 </div>
+			</div>
+			</div>
+			<div class="col">
+			<div class="card">
+ 			 <div class="card-header">
+   				 <h2>지원 종류별(수시/정시)</h2>
+  			</div>
+	  		<div class="card-body">
+			        <canvas id="myChart" width="350" height="310"></canvas>
+			        <script>
 			        $.getJSON("resources/volunteer_attribute.json", function(data) {
 			        	const labels = Object.values(data.attribute);
 			        	const datas = Object.values(data.y_twenty_one);
@@ -240,8 +249,8 @@
 			        			label: '지원자',
 			        			lineTension : 0.1,
 			        			data: datas,
-			        			backgroundColor: ["rgba(255, 55, 55, 0.3)",
-			        				'rgba(55, 104, 250, 0.3)'
+			        			backgroundColor: ["rgba(255, 99, 132, 0.2)",
+			        				'rgb(255, 205, 86)'
 			        				],
 			        				hoverOffset: 4
 			        				}]
@@ -277,18 +286,18 @@
 			           };
 			        });
 			        </script>
-								<a href="university.jsp" class="btn btn-primary">이동</a>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card">
-							<div class="card-header">
-								<h1>지역별 지원 현황</h1>
-							</div>
-							<div class="card-body">
-								<canvas id="myChart1" width="400" height="300"></canvas>
-								<script>
+			    <a href="university.jsp?pageChange=university_menu_3.jsp" class="btn btn-primary">이동</a>
+	 		 </div>
+			</div>
+			</div>
+			<div class="col">
+			<div class="card">
+		 <div class="card-header">
+   				 <h1>지역별 지원 현황</h1>
+   			</div>
+   			<div class="card-body">
+   			<canvas id="myChart1" width="400" height="300"></canvas>
+			        <script>
 			        var data = [{
 			            labels: ['서울','경기도','강원도','경상도','전라도','충청도','광역시','제주도'],
 			            backgroundColor: [
@@ -336,15 +345,9 @@
 						labels:labels,
 						datasets: [{
 							label: '지원자',
-							lineTension : 1,
+							lineTension : 0.1,
 							data: datas,
-							backgroundColor: ["rgba(255, 102, 102, 0.3)",
-								  			  "rgba(51, 0, 255, 0.3)",
-								  			  "rgba(0, 255, 51, 0.3)", 
-								  			  "rgba(55, 152, 255, 0.3)",
-								  			  "rgba(255, 152, 0, 0.3)",
-								  			  "rgba(155, 252, 255, 0.3)",
-								  			  "rgba(155, 55, 105, 0.3)"]
+							backgroundColor: "rgba(255, 99, 132, 0.2)"
 						}]
 					},
 					options: {
@@ -356,14 +359,14 @@
 					});
 				    });
 				        </script>
-								<a href="#" class="btn btn-primary">이동</a>
-							</div>
-						</div>
-					</div>
+	  					<a href="university.jsp?pageChange=university_menu_1.jsp" class="btn btn-primary">이동</a>
+  					</div>
 				</div>
 			</div>
-
-			<div class="container mt-5 text-center">
+		</div>
+	</div>
+	
+	<div class="container mt-5 text-center">
 	<div class = "row">
 	<div class="col">
 		<div class="card">
