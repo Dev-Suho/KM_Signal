@@ -9,7 +9,9 @@
 	<!-- 부트스트랩, 커스텀 CSS 추가하기 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 		<link rel="stylesheet" href="./css/custom.css">
-	<script src="https://kit.fontawesome.com/2d323a629b.js"></script>
+	<script
+	src="https://kit.fontawesome.com/2d323a629b.js"
+	></script>
 	<script src="./js/main.js" defer></script>
 	<!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -32,13 +34,12 @@
 		<a class="navbar-brand" href="Main.jsp">KM-Signal</a>
 	  </div>
 		<ul class="navbar_menu">
-		<li><a href="#">대학정보</a></li>
-		<li><a href="#">대학정보</a></li>
-        <li><a href="#">대학정보</a></li>
+		<li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>
+		<li><a href="department.jsp">학과정보</a></li>
 		</ul>
 		<ul class ="navbar_icons">
-		<li><i>로그인</i></li>
-		<li><i>회원 가입</i></li>
+		<li><i></i></li>
+		<li><i></i></li>
 		</ul>
 		<a href="#" class="navbar_toogleBtn">
 		<i class="fas fa-bars"></i>
@@ -76,7 +77,7 @@
 			        		        data: datas1,
 			        		        backgroundColor: 'rgba(255, 99, 132, 0.2)',
 			        		        label: '지원자'
-			        		       
+			        		        
 			        		      },
 			        		      {
 			        		        data: datas2,
@@ -110,7 +111,7 @@
 				</div>
 			</div>
 			<div class="col">
-			<table class="table table-striped">
+			<table class="table table-striped text-center">
 			  <thead>
 			    <tr>
 			      <th scope="col"><h2>년도별</h2></th>
@@ -119,41 +120,47 @@
 			      <th scope="col"><h2>등록자</h2></th>
 			    </tr>
 			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row"><h1>2017</h1></th>
-			      <td><h3>16176명</h3></td>
-			      <td><h3>6300명</h3></td>
-			      <td><h3>1855명</h3></td>
-			    </tr>
-			    <tr>
-			      <th scope="row"><h1>2018</h1></th>
-			      <td><h3>14424명</h3></td>
-			      <td><h3>5163명</h3></td>
-			      <td><h3>1633명</h3></td>			     
-			    </tr>
-			    <tr>
-			      <th scope="row"><h1>2019</h1></th>
-			      <td><h3>16624명</h3></td>
-			      <td><h3>6530명</h3></td>
-			      <td><h3>1819명</h3></td>
-			    </tr>
-			     <tr>
-			      <th scope="row"><h1>2020</h1></th>
-			      <td><h3>13457명</h3></td>
-			      <td><h3>5662명</h3></td>
-			      <td><h3>1442명</h3></td>
-			    </tr>
-			     <tr>
-			      <th scope="row"><h1>2021</h1></th>
-			      <td><h3>13266명</h3></td>
-			      <td><h3>5441명</h3></td>
-			      <td><h3>1408명</h3></td>
-			    </tr>
+			  <tbody id = "target">
+			   
 			  </tbody>
 			</table>
 			</div>  
 	</div>
+				        <script type="text/javascript">
+				        var target = $('#target');
+			       		$.getJSON("resources/examination.json", function(data) {
+			        	const labels = Object.values(data.examination);
+			        	const datas1 = Object.values(data.a1);
+			        	const datas2 = Object.values(data.a2);
+			        	const datas3 = Object.values(data.a3);
+			        	
+			        	for(i=0;i<labels.length; i++){
+			        		
+			        	
+			        	var add_data ='';
+			        	add_data += '<tr>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+labels[i]+'</h4>';
+						add_data += '</td>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+datas1[i]+ '명'+'</h4>';
+						add_data += '</td>';
+
+						add_data += '<td>';
+						add_data += '<h4>'+datas2[i]+ '명'+'</h4>';
+						add_data += '</td>';
+						
+						add_data += '<td>';
+						add_data += '<h4>'+datas3[i]+ '명'+'</h4>';
+						add_data += '</td>';
+
+						add_data += '</tr>';
+						target.append(add_data);
+			        	}
+			        });
+			        	</script>
 	<hr>
 	<div class="container mt-5 text-center"> 
 		<div class = "row">
@@ -217,7 +224,7 @@
 			           };
 			        });
 			        </script>
-			    <a href="university.jsp" class="btn btn-primary">이동</a>  
+			    <a href="university.jsp?pageChange=university_menu_2.jsp" class="btn btn-primary">이동</a>  
 	 		 </div>
 			</div>
 			</div>
@@ -279,7 +286,7 @@
 			           };
 			        });
 			        </script>
-			    <a href="university.jsp" class="btn btn-primary">이동</a>
+			    <a href="university.jsp?pageChange=university_menu_3.jsp" class="btn btn-primary">이동</a>
 	 		 </div>
 			</div>
 			</div>
@@ -352,7 +359,7 @@
 					});
 				    });
 				        </script>
-	  					<a href="#" class="btn btn-primary">이동</a>
+	  					<a href="university.jsp?pageChange=university_menu_1.jsp" class="btn btn-primary">이동</a>
   					</div>
 				</div>
 			</div>
