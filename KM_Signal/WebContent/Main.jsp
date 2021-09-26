@@ -34,7 +34,8 @@
 	  </div>
 		<ul class="navbar_menu">
 		<li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>&nbsp;&nbsp;&nbsp;
-		<li><a href="department.jsp">학과정보</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<li><a href="department.jsp">학과정보</a></li>&nbsp;&nbsp;&nbsp;
+		<li><a href="map.jsp">지도보기</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</ul>
 		
 		<ul class ="navbar_icons">
