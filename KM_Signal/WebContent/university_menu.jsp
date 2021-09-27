@@ -25,6 +25,12 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="?pageChange=university_menu_4.jsp">입학 정보 경로</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="?pageChange=university_menu_5.jsp">서울시 유입현황</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="?pageChange=university_menu_6.jsp">경기도 유입현황</a>
+        </li>
         
       </ul>
             <span class="navbar-text">
