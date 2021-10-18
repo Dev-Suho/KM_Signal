@@ -60,7 +60,7 @@
 						<div class="card-body">
 							<canvas id="myChart3" width="600" height="350"></canvas>
 							<script>
-				   	$.getJSON("resources/examination.json", function(data) {
+				   	$.getJSON("resources/examination.json", function(data) {  //json 가져옴
 				   	const labels = Object.values(data.examination);
 				   	const datas1 = Object.values(data.a1);
 				   	const datas2 = Object.values(data.a2);
@@ -226,26 +226,26 @@
 					<canvas id="myChart" width="350" height="350"></canvas>
 					<script>
 			        $.getJSON("resources/volunteer_attribute.json", function(data) {
-			        	const labels = Object.values(data.attribute);
-			        	const datas = Object.values(data.y_twenty_one);
-			        	const context = document.getElementById('myChart').getContext('2d');
-			        	const myChart = new Chart(context, {
-			        	type : 'doughnut',
+			        	const labels = Object.values(data.attribute);  //차트의 라벨
+			        	const datas = Object.values(data.y_twenty_one);  //db 열 가져옴
+			        	const context = document.getElementById('myChart').getContext('2d'); //형식
+			        	const myChart = new Chart(context, {  
+			        	type : 'doughnut',  //도넛모양
 			        	
 			        	data: {
 			        		labels : labels,
 			        		datasets: [{
 			        			label: '지원자',
-			        			lineTension : 0.1,
+			        			lineTension : 0.1,  //선의 굴곡
 			        			data: datas,
 			        			backgroundColor: 
 			        				['rgba(55, 104, 255, 0.3)',
 				        				'rgba(255, 186, 50, 0.3)'
 			        				],
-			        				hoverOffset: 4
+			        				hoverOffset: 4  //좌표
 			        				}]
 			        },
-			        options: {
+			        options: {   //폰트 사이즈, 굵기
 			        	plugins : {
 			    			datalabels : {
 			    				font : {
@@ -254,7 +254,7 @@
 			    				}
 			    			}
 			    		} ,	
-			        	responsive: false,
+			        	responsive: false,  //크기 고정
 			        }
 			        });
 			        });
@@ -291,7 +291,7 @@
 			        				'rgba(105, 105, 255, 0.4)',
 			        				'rgba(255, 105, 105, 0.4)'
 		        				],
-		        				borderWidth : 1
+		        				borderWidth : 1  //선 굵기
 						}]
 					},
 					options: {
