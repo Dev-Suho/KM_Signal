@@ -29,7 +29,7 @@
 	<!-- header 부분 -->
 	<nav class="navbar" style="background-color: #B4D8E7;">
 	  <div class="navbar_logo">
-		<img alt="" src="./image/KM_Main.jpg">
+		<img alt="Main.jsp" class = "rounded" src="./image/KM_Main.jpg">
 		<a class="navbar-brand"  href="Main.jsp">KM-Signal</a>
 	  </div>
 		<ul class="navbar_menu">
@@ -284,20 +284,12 @@
 						datasets: [{
 							data: datas,
 							backgroundColor: 
-		        				['rgba(55, 104, 255, 0.3)',
-			        				'rgba(255, 55, 55, 0.3)',
-			        				'rgba(105, 105, 105, 0.3)',
-			        				'rgba(55, 55, 255, 0.3)',
-			        				'rgba(105, 105, 255, 0.3)',
-			        				'rgba(255, 105, 105, 0.3)'
-		        				],
-		        				borderColor : [
-		        					'rgb(55, 104, 255)',
-			        				'rgb(255, 55, 55)',
-			        				'rgb(105, 105, 105)',
-			        				'rgb(55, 55, 255)',
-			        				'rgb(105, 105, 255)',
-			        				'rgb(255, 105, 105)'
+		        				['rgba(55, 104, 255, 0.4)',
+			        				'rgba(255, 55, 55, 0.4)',
+			        				'rgba(105, 105, 105, 0.4)',
+			        				'rgba(55, 55, 255, 0.4)',
+			        				'rgba(105, 105, 255, 0.4)',
+			        				'rgba(255, 105, 105, 0.4)'
 		        				],
 		        				borderWidth : 1
 						}]
