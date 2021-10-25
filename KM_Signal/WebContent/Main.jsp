@@ -26,6 +26,10 @@
 </head>
 <body>
 	<header>
+	<style type = "text/css">
+		a { text-decoration:none }
+	</style>
+	
 	<!-- header 부분 -->
 	<nav class="navbar" style="background-color: #B4D8E7;">
 	  <div class="navbar_logo">
@@ -36,11 +40,10 @@
 		<li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>&nbsp;&nbsp;&nbsp;
 		<li><a href="department.jsp">학과정보</a></li>&nbsp;&nbsp;&nbsp;
 		<li><a href="map.jsp">지도보기</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<li><a href="ranking.jsp">순위현황</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</ul>
 		
 		<ul class ="navbar_icons">
-		<li><i></i></li>
-		<li><i></i></li>
 		</ul>
 	</nav>
 	</header>
