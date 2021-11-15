@@ -8,7 +8,8 @@
 	<title>경민대학교 입시분석</title>
 	
 <!-- 부트스트랩, 커스텀 CSS 추가하기 -->
-<link rel="stylesheet" href="./css/custom2.css">
+<link rel="stylesheet" href="./css/custom.css">
+<link rel="stylesheet" href="./css/header.css">
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -24,27 +25,21 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
     
 </head>
-<body>
+<body> 
 	<header>
-	<style type = "text/css">
-		a { text-decoration:none }
-	</style>
-	
 	<!-- header 부분 -->
-	<nav class="navbar" style="background-color: #B0C4DE">
-	  <div class="navbar_logo">
-		<img alt="Main.jsp" src="./image/KM_Main.jpg">
-		<a class="navbar-brand"  href="Main.jsp">KM-Signal</a>
+	<nav class="header">
+	  <div>
+		<img class="logo" src="./image/KM_Main.jpg">
+		<a class="km" href="Main.jsp">KM-Signal</a>
 	  </div>
-		<ul class="navbar_menu">
-		<li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>&nbsp;&nbsp;&nbsp;
-		<li><a href="department.jsp">학과정보</a></li>&nbsp;&nbsp;&nbsp;
-		<li><a href="map.jsp">지도보기</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<li><a href="ranking.jsp">순위현황</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<ul class="menu_list">
+		    <li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>
+		    <li><a href="department.jsp">학과정보</a></li>
+		    <li><a href="ranking.jsp">지원자통계</a></li>
+		    <li><a href="map.jsp">지도보기</a></li>
 		</ul>
 		
-		<ul class ="navbar_icons">
-		</ul>
 	</nav>
 	</header>
 	<main class="container text-center">
@@ -191,10 +186,10 @@
 			        		datasets: [{
 			        			data: datas,
 			        			backgroundColor: [
-			        				"rgba(255, 99, 132, 0.3)",
-			        				'rgba(55, 205, 155, 0.3)',
-			        				'rgba(255, 186, 110, 0.3)',
-			        				'rgba(55, 104, 255, 0.3)'
+			        				"rgba(255, 99, 132, 0.3)",  //빨강
+			        				'rgba(55, 205, 155, 0.3)',  //초록
+			        				'rgba(255, 186, 110, 0.3)',  //노랑
+			        				'rgba(55, 104, 255, 0.3)'  //파랑
 			        				],
 			        				hoverOffset: 4
 			        				}]
@@ -242,8 +237,8 @@
 			        			lineTension : 0.1,  //선의 굴곡
 			        			data: datas,
 			        			backgroundColor: 
-			        				['rgba(55, 104, 255, 0.3)',
-				        				'rgba(255, 186, 50, 0.3)'
+			        				['rgba(255, 99, 132, 0.3)',
+				        				'rgba(55, 104, 255, 0.3)'
 			        				],
 			        				hoverOffset: 4  //좌표
 			        				}]
@@ -287,14 +282,24 @@
 						datasets: [{
 							data: datas,
 							backgroundColor: 
-		        				['rgba(55, 104, 255, 0.4)',
-			        				'rgba(255, 55, 55, 0.4)',
-			        				'rgba(105, 105, 105, 0.4)',
-			        				'rgba(55, 55, 255, 0.4)',
-			        				'rgba(105, 105, 255, 0.4)',
-			        				'rgba(255, 105, 105, 0.4)'
+		        				['rgba(255, 186, 110, 0.3)',  //강원도
+			        				'rgba(255, 99, 132, 0.3)',
+			        				'rgba(55, 205, 155, 0.3)',
+			        				'rgba(55, 104, 255, 0.3)',
+			        				'rgba(55, 205, 155, 0.3)',
+			        				'rgba(55, 205, 155, 0.3)',
+			        				'rgba(55, 205, 155, 0.3)'
 		        				],
-		        				borderWidth : 1  //선 굵기
+		        	   <%-- borderColor : [
+		        				    'rgb(55, 104, 255)',
+			        				'rgb(255, 55, 55)',
+			        				'rgb(105, 105, 105)',
+			        				'rgb(55, 55, 255)',
+			        				'rgb(105, 105, 255)',
+			        				'rgb(255, 105, 105)'
+		        				],
+		        				borderWidth : 1  //선 굵기 
+		        				--%>
 						}]
 					},
 					options: {
@@ -376,8 +381,6 @@
 	</div>
 	</div>
 	</div>
-		
 	</section>
-
 </body>
 </html>

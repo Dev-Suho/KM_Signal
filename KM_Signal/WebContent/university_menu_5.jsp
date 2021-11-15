@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header" style = "background-color : #b4d8e7;">
+ 			 <div class="card-header" style = "background-color : #B0C4DE;">
    				<h1 style="text-center">지역별 지원 현황 2016년도</h1>
   			</div>
 	  		<div class="card-body" style="height: 700px;">
@@ -21,14 +21,24 @@
   					<div class="carousel-inner">
     					<div class="carousel-item active text-center">
       						<div style = "width:1280px; height: 900px;">
-     							<canvas id = "myChart"></canvas>
+     							<canvas id = "myChart1"></canvas>
     		 				</div> 
     					</div>
     				<div class="carousel-item text-center">
       					<div style = "width:1280px; height: 900px;">
-     						<canvas id = "myChart1"></canvas>
+     						<canvas id = "myChart2"></canvas>
     		 			</div> 
     				</div>
+    				<div class="carousel-item text-center">
+      						<div style = "width:1280px; height: 900px;">
+     							<canvas id = "myChart3"></canvas>
+    		 				</div> 
+    					</div>
+    					<div class="carousel-item text-center">
+      						<div style = "width:1280px; height: 900px;">
+     							<canvas id = "myChart4"></canvas>
+    		 				</div> 
+    					</div>
 			    </div>
   		<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     		<img alt="" src="./image/left.png" style="width:80px;">
@@ -46,8 +56,8 @@
 <script>
 $.getJSON("resources/seoul_volunteer.json", function(data){
 	const labels = Object.values(data.area);  //컬럼명
-	const datas = Object.values(data.Y2016);
-	const context = document.getElementById('myChart').getContext('2d');
+	const datas = Object.values(data.Y2013);
+	const context = document.getElementById('myChart1').getContext('2d');
 	const myChart = new Chart(context, {
 	type : 'bar',
 	
@@ -57,31 +67,223 @@ $.getJSON("resources/seoul_volunteer.json", function(data){
 			label: '지원자',
 			lineTension : 0.1,
 			data: datas,
-			backgroundColor: ["rgba(270, 30, 69, 0.5)",
-				"rgba(270, 30, 69, 0.7)",
-				"rgba(270, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
-				"rgba(247, 92, 69, 0.7)",
+			backgroundColor: ["rgba(255, 102, 153, 0.8)",  //빨강
+				"rgba(204, 102, 204, 0.6)",  //보라
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  
+				"rgba(102, 204, 204, 0.8)",  //민트
+			    ],
+			    hoverOffset: 4
+		}]
+	},
+	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
+		legend: {
+        	display: false
+        },
+		title:{
+			display: true,
+			fontSize: 30,
+			text:'2013년도 서울'
+		}
+	}
+	});
+});
+</script>
+<script>
+$.getJSON("resources/seoul_volunteer.json", function(data){
+	const labels = Object.values(data.area);  //컬럼명
+	const datas = Object.values(data.Y2014);
+	const context = document.getElementById('myChart2').getContext('2d');
+	const myChart = new Chart(context, {
+	type : 'bar',
+	
+	data: {
+		labels:labels,
+		datasets: [{
+			label: '지원자',
+			lineTension : 0.1,
+			data: datas,
+			backgroundColor: ["rgba(255, 102, 153, 0.8)",  //빨강
+				"rgba(204, 102, 204, 0.6)",  //보라
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(255, 255, 102, 0.7)",  
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(255, 255, 102, 0.7)",  
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  //민트
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  //민트
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  
+				"rgba(102, 204, 204, 0.8)",  //민트
+			    ],
+			    hoverOffset: 4
+		}]
+	},
+	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
+		legend: {
+        	display: false
+        },
+		title:{
+			display: true,
+			fontSize: 30,
+			text:'2014년도 서울'
+		}
+	}
+	});
+});
+</script>
+<script>
+$.getJSON("resources/seoul_volunteer.json", function(data){
+	const labels = Object.values(data.area);  //컬럼명
+	const datas = Object.values(data.Y2015);
+	const context = document.getElementById('myChart3').getContext('2d');
+	const myChart = new Chart(context, {
+	type : 'bar',
+	
+	data: {
+		labels:labels,
+		datasets: [{
+			label: '지원자',
+			lineTension : 0.1,
+			data: datas,
+			backgroundColor: ["rgba(255, 102, 153, 0.8)",  //빨강
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(255, 255, 102, 0.7)",  
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  
+				"rgba(102, 204, 204, 0.8)",  //민트
+			    ],
+			    hoverOffset: 4
+		}]
+	},
+	options: {
+		plugins : {
+			datalabels : {
+				font : {
+					weight : 'bold',
+					size : 18
+				}
+			}
+		} ,	
+		legend: {
+        	display: false
+        },
+		title:{
+			display: true,
+			fontSize: 30,
+			text:'2015년도 서울'
+		}
+	}
+	});
+});
+</script>
+<script>
+$.getJSON("resources/seoul_volunteer.json", function(data){
+	const labels = Object.values(data.area);  //컬럼명
+	const datas = Object.values(data.Y2016);
+	const context = document.getElementById('myChart4').getContext('2d');
+	const myChart = new Chart(context, {
+	type : 'bar',
+	
+	data: {
+		labels:labels,
+		datasets: [{
+			label: '지원자',
+			lineTension : 0.1,
+			data: datas,
+			backgroundColor: ["rgba(255, 102, 153, 0.8)",  //빨강
+				"rgba(204, 102, 204, 0.6)",  //보라
+				"rgba(153, 204, 255, 0.8)",  //파랑
+				"rgba(255, 255, 102, 0.7)",  //노랑
+				"rgba(255, 255, 102, 0.7)",  
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(153, 255, 153, 0.8)",  //초록
+				"rgba(255, 255, 102, 0.7)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(153, 255, 153, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",
+				"rgba(102, 204, 204, 0.8)",  
+				"rgba(102, 204, 204, 0.8)",  //민트
 			    ],
 			    hoverOffset: 4
 		}]

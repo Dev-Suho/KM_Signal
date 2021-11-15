@@ -27,7 +27,7 @@
 		}
 	%>
 	<nav class="navbar navbar-expand-lg navbar-light"
-		style="background-color: #b4d8e7;">
+		style="background-color: #B0C4DE;">   <!-- #b4d8e7 -->
 		<div class="container-fluid">
 			<a class="navbar-brand" href="department.jsp">학과별 상세 분석</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"

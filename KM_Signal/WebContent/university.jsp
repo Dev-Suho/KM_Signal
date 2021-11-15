@@ -8,6 +8,7 @@
 <title>university</title>
 
 	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href="./css/sub_header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -16,13 +17,13 @@
 
 <body>
 	<%
-		String select = request.getParameter("pageChange");
-	
+		String select = request.getParameter("pageChance");
+
 		if(select == null){
 			select = "university_menu_1.jsp";
 		}
 	%>
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B4D8E7;">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #B0C4DE;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">대학입시 상세 분석</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

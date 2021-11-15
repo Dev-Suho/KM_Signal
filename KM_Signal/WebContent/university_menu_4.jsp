@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header" style = "background-color : #b4d8e7;">
+ 			 <div class="card-header" style = "background-color : #B0C4DE;">
    					<h1 style="text-center">입학정보 경로 분석</h1>
   			</div>
 	  		<div class="card-body" style="height: 700px; margin: 0 auto;">

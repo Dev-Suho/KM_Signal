@@ -12,7 +12,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header" style = "background-color : #b4d8e7;">
+ 			 <div class="card-header" style = "background-color : #B0C4DE;">
    				<h1 style="text-center">학과 취업률</h1>
   			</div>
   			<div class="card-body" style="height: 700px;">

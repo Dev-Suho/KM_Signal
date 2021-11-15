@@ -8,9 +8,9 @@ import pymysql
 con = pymysql.connect(
     host = '127.0.0.1',
     user = 'root',
-    password = 'suho1999',
+    password = '1234',
     db = 'km_signal',
-    port = 3307,
+    port = 3306,
     charset = 'utf8',
     #as_dict = True
     )
@@ -19,7 +19,7 @@ con = pymysql.connect(
 cur = con.cursor(pymysql.cursors.DictCursor)
 
 # SQL
-select_sql = "SELECT * FROM department_volunteer_attribute2;"
+select_sql = "SELECT * FROM gyeonggido_volunteer;"
 cur.execute(select_sql)
 
 # fetchall() : 모든 데이터 호출, fetchone() : 한 번 호출에 하나의 행, fetcgmany(n) : n개만큼 데이터를 호출
@@ -33,7 +33,7 @@ result = pd.DataFrame(result)
 json_test = result.to_json(orient = 'columns')
 
 # json을 외부 파일로 보내기
-result.to_json("D:\캡스톤디자인\json_file\department_volunteer_attribute2.json", orient = 'columns')
+result.to_json("C:\경기도\gyeonggido_volunteer.json", orient = 'columns')
 
 print(json_test)
 
