@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css );
 @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css );
-.navbar-brand, h1, h2, h3, h4 {
+h1, h2, h3, h4 {
 	font-family: 'Jeju Gothic';
-	font-size: 24px;
+	font-size: 14px;
+}
+.navbar-brand {
+	font-size : 30px;
 }
 body{
 	font-family: 'Nanum Gothic';
@@ -18,12 +21,13 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #B4D8E7;
+	background-color: #4f3c2b;  /* #B4D8E7 */
 	padding: 8px 12px;
+	font-size : 40px;
 }
 
 .navbar_logo{
-	font-size:24px;
+	font-size:32px;
 	color: white;
 }
 .navbar_logo img{

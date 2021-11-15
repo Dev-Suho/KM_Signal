@@ -22,17 +22,17 @@
 <body>
 	<main class="container text-center">
  		<div class="bg-light p-3 rounded">
-    		<h1>2014년 경민대학교 지원자 통계</h1>  
+    		<h1>2021년 공간디자인과 지원자 통계</h1>  
   		</div>
 		<table id="myTable" class="cell-border stripe order-column hover">
 			<thead>
 				<tr>
-					<th>순위</th>
-					<th>행정구</th>
+					<th>고등학교</th>
+					<th>분류</th>
 					<th>지원자 수</th>
-					<th>평균 지원자 수</th>
-					<th>전년도 대비 증감률</th>
-					<th>비율</th>
+					<th>합격자 수</th>
+					<th>등록자 수</th>
+					<th>선호도( Z점수 )</th>
 				</tr>
 			</thead>
 		</table>
@@ -71,16 +71,16 @@
 				className : 'dt-body-center',
 				<!-- dataframe형태를 datatable로 표현하려면 record 형태로 추출해야함  -->
 				ajax : {
-					url : "resources/seoul_volunteer_table.json",
+					url : "resources/department/department_volunteer_2021_공간디자인과.json",
 					dataSrc : ''
 				},
 				columns : [ 
-					{ "data" : "rank_2014" }, 
-					{ "data" : "area" },
-					{ "data" : "Y2014" },
-					{ "data" : "average" }, 
-					{ "data" : "pct_change_2014" },
-					{ "data" : "perc_2014" }
+					{ "data" : "고등학교" }, 
+					{ "data" : "고교구분" },
+					{ "data" : "지원자" },
+					{ "data" : "합격자" }, 
+					{ "data" : "등록자" },
+					{ "data" : "Z_Score" }
 					],
 					language : lang_kor
 			});

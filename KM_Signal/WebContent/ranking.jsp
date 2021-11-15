@@ -19,7 +19,7 @@
 		String select = request.getParameter("pageChange");
 	
 		if(select == null){
-			select = "ranking_menu_1.jsp";
+			select = "ranking_menu_4.jsp";
 		}
 	%>
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B4D8E7;">

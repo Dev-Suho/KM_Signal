@@ -22,7 +22,7 @@
 <body>
 	<main class="container text-center">
  		<div class="bg-light p-3 rounded">
-    		<h1>2013년 경민대학교 지원자</h1>  
+    		<h1>2013년 경민대학교 지원자 통계</h1>  
   		</div>
 		<table id="myTable" class="cell-border stripe order-column hover">
 			<thead>
