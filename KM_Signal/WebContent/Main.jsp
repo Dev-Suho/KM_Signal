@@ -28,10 +28,10 @@
 <body> 
 	<header>
 	<!-- header 부분 -->
-	<nav class="header">
+	<nav class="navbar">
 	  <div>
-		<img class="logo" src="./image/KM_Main.jpg">
-		<a class="km" href="Main.jsp">KM-Signal</a>
+		<img class="navbar_logo" src="./image/KM_Main.jpg">
+		<a class="navbar_brand" href="Main.jsp">KM-Signal</a>
 	  </div>
 		<ul class="menu_list">
 		    <li><a href="university.jsp?pageChange=university_menu_1.jsp">대학정보</a></li>
@@ -39,11 +39,11 @@
 		    <li><a href="ranking.jsp">지원자통계</a></li>
 		    <li><a href="map.jsp">지도보기</a></li>
 		</ul>
-		
 	</nav>
 	</header>
+	
 	<main class="container text-center">
-  <div class="bg-light p-5 rounded">
+  <div class="bg-light p-5 rounded" style="background: url(image/logo_image.jpg)">
     <h1>경민대학교 입시분석 홈페이지</h1>
   </div>
 </main>

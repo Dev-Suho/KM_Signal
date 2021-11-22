@@ -17,7 +17,7 @@
 
 <body>
 	<%
-		String select = request.getParameter("pageChance");
+		String select = request.getParameter("pageChange");
 
 		if(select == null){
 			select = "university_menu_1.jsp";

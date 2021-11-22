@@ -8,52 +8,62 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-	<div class="container mt-5 text-center"> 
-		<div class = "row">
+	<div class="container mt-5 text-center">
+		<div class="row">
 			<div class="col">
-			<div class="card">
- 			 <div class="card-header" style = "background-color : #B0C4DE;">
-   				<h1 style="text-center">지역별 지원 현황 2016년도</h1>
-  			</div>
-	  		<div class="card-body" style="height: 700px;">
-			    <p class="card-text">
-			    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
-  					<div class="carousel-inner">
-    					<div class="carousel-item active text-center">
-      						<div style = "width:1280px; height: 900px;">
-     							<canvas id = "myChart1"></canvas>
-    		 				</div> 
-    					</div>
-    				<div class="carousel-item text-center">
-      					<div style = "width:1280px; height: 900px;">
-     						<canvas id = "myChart2"></canvas>
-    		 			</div> 
-    				</div>
-    				<div class="carousel-item text-center">
-      						<div style = "width:1280px; height: 900px;">
-     							<canvas id = "myChart3"></canvas>
-    		 				</div> 
-    					</div>
-    					<div class="carousel-item text-center">
-      						<div style = "width:1280px; height: 900px;">
-     							<canvas id = "myChart4"></canvas>
-    		 				</div> 
-    					</div>
-			    </div>
-  		<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    		<img alt="" src="./image/left.png" style="width:80px;">
-    		<span class="visually-hidden">Previous</span>
-  		</button>
-  		<button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-   			<img alt="" src="./image/right.png" style="width:80px;">
-    		<span class="visually-hidden">Next</span>
-  		</button>
-	   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-	
-<script>
+				<div class="card">
+					<div class="card-header" style="background-color: #B0C4DE;">
+						<h1 style="">지역별 지원 현황 2016년도</h1>
+					</div>
+					<div class="card-body" style="height: 700px;">
+						<p class="card-text">
+						<div id="carouselExampleControls" class="carousel slide"
+							data-interval="false">
+							<div class="carousel-inner">
+								<div class="carousel-item active text-center">
+									<div style="width: 1280px; height: 900px;">
+										<canvas id="myChart1"></canvas>
+									</div>
+								</div>
+								<div class="carousel-item text-center">
+									<div style="width: 1280px; height: 900px;">
+										<canvas id="myChart2"></canvas>
+									</div>
+								</div>
+								<div class="carousel-item text-center">
+									<div style="width: 1280px; height: 900px;">
+										<canvas id="myChart3"></canvas>
+									</div>
+								</div>
+								<div class="carousel-item text-center">
+									<div style="width: 1280px; height: 900px;">
+										<canvas id="myChart4"></canvas>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev mt-5" type="button"
+								data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<img alt="" src="./image/left.png" style="width: 80px;"> <span
+									class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next mt-5" type="button"
+								data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<img alt="" src="./image/right.png" style="width: 80px;">
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+		<script>
 $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	const labels = Object.values(data.area);  //컬럼명
 	const datas = Object.values(data.Y2013);  //2013
@@ -112,7 +122,8 @@ $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	});
 });
 </script>
-<script>
+</div>
+		<script>
 $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	const labels = Object.values(data.area);  //컬럼명
 	const datas = Object.values(data.Y2014);  //2014
@@ -171,7 +182,7 @@ $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	});
 });
 </script>
-<script>
+		<script>
 $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	const labels = Object.values(data.area);  //컬럼명
 	const datas = Object.values(data.Y2015);  //2015
@@ -230,7 +241,7 @@ $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	});
 });
 </script>
-<script>
+		<script>
 $.getJSON("resources/gyeonggido_volunteer.json", function(data){
 	const labels = Object.values(data.area);  //컬럼명
 	const datas = Object.values(data.Y2016);  //2016
