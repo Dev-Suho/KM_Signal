@@ -10,7 +10,7 @@
 <body>
 	<% String pageChange; %>
 	<div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             지원 현황
@@ -35,7 +35,7 @@
         
       </ul>
             <span class="navbar-text">
-       		 	<a href="Main.jsp">메인 홈페이지 이동</a>
+       		 	<a class = "pageMove" href="Main.jsp">메인 홈페이지 이동</a>
       		</span>
       </div>
 	

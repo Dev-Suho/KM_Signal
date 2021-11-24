@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-
+<link rel = "stylesheet" href = "./css/sub_header.css">
 </head>
 <body>
 		<!-- 학과 지원률 슬라이드 -->
@@ -14,7 +14,7 @@
 		<div class = "row">
 			<div class="col">
 			<div class="card">
- 			 <div class="card-header" style = "background-color : #B0C4DE;">
+ 			 <div class="card-header" style = "background-color: #B0C4DE;">
    				<h1 style="text-center">학과 지원률</h1>
   			</div>
   			<div class="card-body" style="height: 700px; margin:0 auto;">

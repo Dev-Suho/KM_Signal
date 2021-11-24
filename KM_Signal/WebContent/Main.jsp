@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<title>경민대학교 입시분석</title>
 	
 <!-- 부트스트랩, 커스텀 CSS 추가하기 -->
@@ -43,16 +43,16 @@
 	</header>
 	
 	<main class="container text-center">
-  <div class="bg-light p-5 rounded" style="background: url(image/logo_image.jpg)">
+  <div class="bg-primary p-5 rounded" style="background: url(image/logo_image2.jpg);">
     <h1>경민대학교 입시분석 홈페이지</h1>
   </div>
 </main>
 	<section>
 	<div class="container mt-5">
-			<div class="row">
+			<div class="row align-item-center">
 				<div class="col">
-					<div class="card">
-						<div class="card-header text-center">
+					<div class="card border-primary">
+						<div class="card-header text-center text-primary">
 							<h1>경민대학교 지원자 통계</h1>
 						</div>
 						<div class="card-body">
@@ -167,8 +167,8 @@
 			<div class="container mt-5 text-center"> 
 		<div class = "row">
 			<div class="col">
-			<div class="card">
- 			 <div class="card-header">
+			<div class="card border-primary">
+ 			 <div class="card-header text-primary">
    				<h3>2021년 학교 특성별 지원율</h3>
   			</div>
 	  		<div class="card-body">
@@ -216,8 +216,8 @@
 			</div>
 			</div>
 			<div class="col">
-			<div class="card">
- 			 <div class="card-header">
+			<div class="card border-primary">
+ 			 <div class="card-header text-primary">
    				 <h3>2021년 수시/정시 비율</h3>
   			</div>
 					<div class="card-body">
@@ -262,8 +262,8 @@
 				</div>
 			</div>
 			<div class="col">
-			<div class="card">
-		 <div class="card-header">
+			<div class="card border-primary">
+		 <div class="card-header text-primary">
    				 <h3>2021년 지역별 지원현황</h3>
    			</div>
    			<div class="card-body">
@@ -328,11 +328,11 @@
 	<div class="container mt-5 text-center">
 	<div class = "row">
 	<div class="col">
-		<div class="card">
-  			 <div class="card-header">
+		<div class="card border-primary">
+  			 <div class="card-header text-primary">
    				 <h1>2021년 경민대 학과별 지원자</h1>
    				 </div>
-  				<div class="card-body">
+  				<div class="card-body-result">
   				<canvas id="myChart7" width="400" height="180"></canvas>
 				<script>
 					$.getJSON("resources/json_test.json", function(data) {

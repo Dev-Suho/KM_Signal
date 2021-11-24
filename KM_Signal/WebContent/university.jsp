@@ -23,9 +23,9 @@
 			select = "university_menu_1.jsp";
 		}
 	%>
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #B0C4DE;">
+	<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">대학입시 상세 분석</a>
+    <a class="navbar-brand" href="university.jsp">대학입시 상세 분석</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,7 +33,7 @@
     </div>
 </nav>
 	<main class="container text-center">
- 		<div class="bg-light p-3 rounded">
+ 		<div class="bg-right p-3 rounded">
     		<h1>경민대학교 지원 입시 분석</h1>  
   		</div>
 	</main>

@@ -5,11 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="./css/sub_header.css">
 </head>
 <body>
 	<% String pageChange; %>
-	<div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	<div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             행정구 연도별 통계
@@ -22,7 +23,7 @@
            </ul>
         </li>
      	<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_school" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             고등학교 연도별 통계
           </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdown_school">
@@ -35,7 +36,7 @@
            </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_school" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             학과 연도별 통계
           </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdown_school">
@@ -66,7 +67,7 @@
         </li>
       </ul>
             <span class="navbar-text">
-       		 	<a href="Main.jsp">메인 홈페이지 이동</a>
+       		 	<a class = "pageMove" href="Main.jsp">메인 홈페이지 이동</a>
       		</span>
       </div>
 	
