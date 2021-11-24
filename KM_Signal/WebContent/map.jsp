@@ -33,7 +33,7 @@
 </nav>
 	<main class="container text-center">
  		<div class="bg-light p-3 rounded">
-    		<h1>고등학교 지원률 지도 현황</h1>  
+    		<h1>지역별 지원자 고등학교 현황</h1>  
   		</div>
 	</main>
 	<jsp:include page="<%=select %>" flush="false" />
