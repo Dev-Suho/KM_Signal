@@ -21,7 +21,7 @@
 </head>
 <body>
 	<main class="container text-center">
- 		<div class="bg-light p-3 rounded">
+ 		<div class="bg-right p-3 rounded">
     		<h1>2021년 고등학교 정시 지원자 통계</h1>  
   		</div>
 		<table id="myTable" class="cell-border stripe order-column hover">

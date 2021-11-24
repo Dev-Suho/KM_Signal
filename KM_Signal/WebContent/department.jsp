@@ -36,9 +36,9 @@
 			</button>
 			<%@ include file="header.jsp"%>
 		</div>
-	</nav>
+	</nav>	
 	<main class="container text-center">
-		<div class="bg-light p-5 rounded">
+		<div class="bg-right p-3 rounded">
 			<h1>경민대학교 학과별 입시 분석</h1>
 		</div>
 	</main>
