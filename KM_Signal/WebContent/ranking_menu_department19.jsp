@@ -11,7 +11,8 @@
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 
 	<!-- css -->
-	<link rel="stylesheet" href="./css/map_menu.css">
+	<link rel = "stylesheet" href = "./css/sub_header.css">
+	<link rel = "stylesheet" href="./css/table_style.css">
 	
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css ">
       <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -21,7 +22,7 @@
 </head>
 <body>
 	<main class="container text-center">
- 		<div class="bg-light p-3 rounded">
+ 		<div class="bg-right p-3 rounded">
     		<h1>2021년 정보통신과 지원자 통계</h1>  
   		</div>
 		<table id="myTable" class="cell-border stripe order-column hover">

@@ -9,6 +9,7 @@
 
 	 <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel = "stylesheet" href = "./css/sub_header.css">
 </head>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -22,9 +23,9 @@
 			select = "map_menu1.jsp";
 		}
 	%>
-	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0C4DE;">
+	<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">지도 현황</a>
+    <a class="navbar-brand" href="map.jsp">지도 현황</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +33,7 @@
     </div>
 </nav>
 	<main class="container text-center">
- 		<div class="bg-light p-3 rounded">
+ 		<div class="bg-right p-3 rounded">
     		<h1>지역별 지원자 고등학교 현황</h1>  
   		</div>
 	</main>

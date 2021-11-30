@@ -13,7 +13,7 @@
 			<div class="col">
 				<div class="card">
 					<div class="card-header" style="background-color: #B0C4DE;">
-						<h1 style="">지역별 지원 현황 2016년도</h1>
+						<h1 style="">경기도 행정구별 지원 현황</h1>
 					</div>
 					<div class="card-body" style="height: 700px;">
 						<p class="card-text">

@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
    <title>마커 클러스터러에 클릭이벤트 추가하기</title>
 <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<link rel = "stylesheet" href = "./css/infowindow_style.css">
 </head>
 <body>
 <p style="margin-top:-12px">
@@ -13,7 +15,7 @@
       
     </em>
 </p>
-<div id="map" style="width:100%;height:800px;"></div>
+<div id="map" style="width:85%;height:800px;margin:0 auto;"></div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5cf392dde7cf12d178ac57abcafcd80e&libraries=clusterer"></script>
 <script>
 $(document).ready(function() {
@@ -40,17 +42,19 @@ $(document).ready(function() {
 	            });
 	            
 	            var infowindow = new kakao.maps.InfoWindow({
-	                content : '<div "margin-right: 50px;"><strong>'+ position.high_school_name +
-	                '</strong></div><hr><div style="padding:10px;">'+ position.applicant +'</div>'+
-	                '<div style="padding:10px;">'+ position.major_applicant +'</div><br><div style="padding:5px;"><a href="ranking.jsp?pageChange=ranking_menu_department1.jsp">이동</a></div>',
+	                content : '<div class = "info-title"><strong>'+ position.high_school_name +
+	                '</strong></div><hr><div class = "info-sub">'+ position.applicant +'</div>'+
+	                '<div class = "info-sub">'+ position.major_applicant +'</div><br><div class = "info-button"><a href="ranking.jsp?pageChange=ranking_menu_department1.jsp">이동</a></div>',
 	                removable : true
 	            });
 	            
+           				 
 	            kakao.maps.event.addListener(marker, 'click', function() {
-			        // 마커 위에 인포윈도우를 표시합니다
+	            	
+	            	// 마커 위에 인포윈도우를 표시합니다
 			        infowindow.open(map, marker);
 			    });
-	            
+
 	        	return marker;
 	            
 	        });

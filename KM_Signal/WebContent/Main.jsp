@@ -48,15 +48,15 @@
   </div>
 </main>
 	<section>
-	<div class="container mt-5">
-			<div class="row align-item-center">
+		<div class="container mt-5 text-center">
+			<div class="row align-item-center rounded-circle">
 				<div class="col">
 					<div class="card border-primary">
 						<div class="card-header text-center text-primary">
-							<h1>경민대학교 지원자 통계</h1>
+							<h2>경민대학교 지원자 통계</h2>
 						</div>
 						<div class="card-body">
-							<canvas id="myChart3" width="600" height="350"></canvas>
+							<canvas id="myChart3" width="600" height="390"></canvas>
 							<script>
 				   	$.getJSON("resources/examination.json", function(data) {  //json 가져옴
 				   	const labels = Object.values(data.examination);
@@ -113,162 +113,15 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="col">
-					<table class="table table-striped text-center">
-						<thead>
-							<tr>
-								<th scope="col"><h2>연도별</h2></th>
-								<th scope="col"><h2>지원자</h2></th>
-								<th scope="col"><h2>합격자</h2></th>
-								<th scope="col"><h2>등록자</h2></th>
-							</tr>
-						</thead>
-						<tbody id="target">
-
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<script type="text/javascript">
-				        var target = $('#target');
-			       		$.getJSON("resources/examination.json", function(data) {
-			        	const labels = Object.values(data.examination);
-			        	const datas1 = Object.values(data.a1);
-			        	const datas2 = Object.values(data.a2);
-			        	const datas3 = Object.values(data.a3);
-			        	
-			        	for(i=0;i<labels.length; i++){
-			        		
-			        	var add_data ='';
-			        	add_data += '<tr>';
-
-						add_data += '<td>';
-						add_data += '<h4>'+labels[i]+'</h4>';
-						add_data += '</td>';
-
-						add_data += '<td>';
-						add_data += '<h4>'+datas1[i]+ '명'+'</h4>';
-						add_data += '</td>';
-
-						add_data += '<td>';
-						add_data += '<h4>'+datas2[i]+ '명'+'</h4>';
-						add_data += '</td>';
-						
-						add_data += '<td>';
-						add_data += '<h4>'+datas3[i]+ '명'+'</h4>';
-						add_data += '</td>';
-
-						add_data += '</tr>';
-						target.append(add_data);
-			        	}
-			        });
-			        	</script>
-			<hr>
-			<div class="container mt-5 text-center"> 
-		<div class = "row">
-			<div class="col">
-			<div class="card border-primary">
- 			 <div class="card-header text-primary">
-   				<h3>2021년 학교 특성별 지원율</h3>
-  			</div>
-	  		<div class="card-body">
-			    <canvas id="myChart2" width="350" height="350"></canvas>
-			        <script>
-			        $.getJSON("resources/school_attribute.json", function(data) {
-			        	const labels = Object.values(data.attribute);
-			        	const datas = Object.values(data.y_twenty_one);
-			      	 	const context2 = document.getElementById('myChart2').getContext('2d');
-			       	 	const myChart2 = new Chart(context2, {
-			        	type : 'doughnut',
-			        	
-			        	data: {
-			        		labels: labels,
-			        		datasets: [{
-			        			data: datas,
-			        			backgroundColor: [
-			        				"rgba(255, 99, 132, 0.3)",  //빨강
-			        				'rgba(55, 205, 155, 0.3)',  //초록
-			        				'rgba(255, 186, 110, 0.3)',  //노랑
-			        				'rgba(55, 104, 255, 0.3)'  //파랑
-			        				],
-			        				hoverOffset: 4
-			        				}]
-			        },
-			        options: {
-			        	plugins : {
-			    			datalabels : {
-			    				font : {
-			    					weight : 'bold',
-			    					size : 16
-			    				}
-			    			}
-			    		} ,	
-			        	responsive: false,
-			        	title:{
-			        		display: true,
-			        		}
-			        }
-			        });
-			        });
-			        </script>
-			    <a href="university.jsp?pageChange=university_menu_2.jsp" class="btn btn-primary">이동</a>  
-	 		 </div>
-			</div>
-			</div>
-			<div class="col">
-			<div class="card border-primary">
- 			 <div class="card-header text-primary">
-   				 <h3>2021년 수시/정시 비율</h3>
-  			</div>
-					<div class="card-body">
-					<canvas id="myChart" width="350" height="350"></canvas>
-					<script>
-			        $.getJSON("resources/volunteer_attribute.json", function(data) {
-			        	const labels = Object.values(data.attribute);  //차트의 라벨
-			        	const datas = Object.values(data.y_twenty_one);  //db 열 가져옴
-			        	const context = document.getElementById('myChart').getContext('2d'); //형식
-			        	const myChart = new Chart(context, {  
-			        	type : 'doughnut',  //도넛모양
-			        	
-			        	data: {
-			        		labels : labels,
-			        		datasets: [{
-			        			label: '지원자',
-			        			lineTension : 0.1,  //선의 굴곡
-			        			data: datas,
-			        			backgroundColor: 
-			        				['rgba(255, 99, 132, 0.3)',
-				        				'rgba(55, 104, 255, 0.3)'
-			        				],
-			        				hoverOffset: 4  //좌표
-			        				}]
-			        },
-			        options: {   //폰트 사이즈, 굵기
-			        	plugins : {
-			    			datalabels : {
-			    				font : {
-			    					weight : 'bold',
-			    					size : 18
-			    				}
-			    			}
-			    		} ,	
-			        	responsive: false,  //크기 고정
-			        }
-			        });
-			        });
-			        </script>
-					<a href="university.jsp?pageChange=university_menu_3.jsp" class="btn btn-primary">이동</a>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-			<div class="card border-primary">
-		 <div class="card-header text-primary">
-   				 <h3>2021년 지역별 지원현황</h3>
-   			</div>
-   			<div class="card-body">
-   			<canvas id="myChart1" width="350" height="350"></canvas>
-			        <script>
+					<div class="card border-primary">
+						<div class="card-header text-primary text-center">
+							<h2>2021년 지역별 지원현황</h2>
+						</div>
+						<div class="card-body">
+							<canvas id="myChart1" width="350" height="350"></canvas>
+							<script>
 			        
 			    $.getJSON("resources/volunteer_area.json", function(data) {
 			    	const labels = Object.values(data.area);
@@ -318,23 +171,123 @@
 					});
 				    });
 				        </script>
-	  					<a href="university.jsp?pageChange=university_menu_1.jsp" class="btn btn-primary">이동</a>
-  					</div>
+							<a href="university.jsp?pageChange=university_menu_1.jsp"
+								class="btn btn-primary">이동</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	<div class="container mt-5 text-center">
-	<div class = "row">
-	<div class="col">
-		<div class="card border-primary">
-  			 <div class="card-header text-primary">
-   				 <h1>2021년 경민대 학과별 지원자</h1>
-   				 </div>
-  				<div class="card-body-result">
-  				<canvas id="myChart7" width="400" height="180"></canvas>
-				<script>
+			<div class="container mt-5 text-center">
+				<div class="row">
+					<div class="col">
+						<div class="card border-primary">
+							<div class="card-header text-primary">
+								<h2>2021년 학교 특성별 지원율</h2>
+							</div>
+							<div class="card-body">
+								<canvas id="myChart2" width="350" height="350"></canvas>
+								<script>
+			        $.getJSON("resources/school_attribute.json", function(data) {
+			        	const labels = Object.values(data.attribute);
+			        	const datas = Object.values(data.y_twenty_one);
+			      	 	const context2 = document.getElementById('myChart2').getContext('2d');
+			       	 	const myChart2 = new Chart(context2, {
+			        	type : 'doughnut',
+			        	
+			        	data: {
+			        		labels: labels,
+			        		datasets: [{
+			        			data: datas,
+			        			backgroundColor: [
+			        				"rgba(255, 99, 132, 0.3)",  //빨강
+			        				'rgba(55, 205, 155, 0.3)',  //초록
+			        				'rgba(255, 186, 110, 0.3)',  //노랑
+			        				'rgba(55, 104, 255, 0.3)'  //파랑
+			        				],
+			        				hoverOffset: 4
+			        				}]
+			        },
+			        options: {
+			        	plugins : {
+			    			datalabels : {
+			    				font : {
+			    					weight : 'bold',
+			    					size : 16
+			    				}
+			    			}
+			    		} ,	
+			        	responsive: false,
+			        	title:{
+			        		display: true,
+			        		}
+			        }
+			        });
+			        });
+			        </script>
+								<a href="university.jsp?pageChange=university_menu_2.jsp"
+									class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card border-primary">
+							<div class="card-header text-primary">
+								<h2>2021년 수시/정시 비율</h2>
+							</div>
+							<div class="card-body">
+								<canvas id="myChart" width="350" height="350"></canvas>
+								<script>
+			        $.getJSON("resources/volunteer_attribute.json", function(data) {
+			        	const labels = Object.values(data.attribute);  //차트의 라벨
+			        	const datas = Object.values(data.y_twenty_one);  //db 열 가져옴
+			        	const context = document.getElementById('myChart').getContext('2d'); //형식
+			        	const myChart = new Chart(context, {  
+			        	type : 'doughnut',  //도넛모양
+			        	
+			        	data: {
+			        		labels : labels,
+			        		datasets: [{
+			        			label: '지원자',
+			        			lineTension : 0.1,  //선의 굴곡
+			        			data: datas,
+			        			backgroundColor: 
+			        				['rgba(255, 99, 132, 0.3)',
+				        				'rgba(55, 104, 255, 0.3)'
+			        				],
+			        				hoverOffset: 4  //좌표
+			        				}]
+			        },
+			        options: {   //폰트 사이즈, 굵기
+			        	plugins : {
+			    			datalabels : {
+			    				font : {
+			    					weight : 'bold',
+			    					size : 18
+			    				}
+			    			}
+			    		} ,	
+			        	responsive: false,  //크기 고정
+			        }
+			        });
+			        });
+			        </script>
+								<a href="university.jsp?pageChange=university_menu_3.jsp"
+									class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-5 text-center">
+				<div class="row">
+					<div class="col">
+						<div class="card border-primary">
+							<div class="card-header text-primary">
+								<h1>2021년 경민대 학과별 지원자</h1>
+							</div>
+							<div class="card-body-result">
+								<canvas id="myChart7" width="400" height="180"></canvas>
+								<script>
 					$.getJSON("resources/json_test.json", function(data) {
 					const labels = Object.values(data.department);
 					const volunteerData = Object.values(data.volunteer);
@@ -374,13 +327,13 @@
 					});
 				});
 				</script>
-  					<a href="./department.jsp" class="btn btn-primary">이동</a>
-  			</div>
-  			</div>
+								<a href="./department.jsp" class="btn btn-primary">이동</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	</div>
-	</div>
 	</section>
 </body>
 </html>

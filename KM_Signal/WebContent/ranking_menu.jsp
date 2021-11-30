@@ -37,7 +37,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            학과 연도별 통계
+            2021년 학과별 통계
           </a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdown_school">
             <li><a class="dropdown-item" href="?pageChange=ranking_menu_department1.jsp">IT 경영과</a></li>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.info-title {
+    display: block;
+    background: #50627F;
+    color: #fff;
+    text-align: center;
+    height: 24px;
+    line-height:22px;
+    border-radius:4px;
+    padding:0px 0px;
+}
+
+.info-sub {
+    display: block;
+    background: #50627F;
+    color: #fff;
+    text-align: center;
+    height: 24px;
+    line-height:22px;
+    padding:0px 0px;
+}
+
+.info-button a {
+    display: block;
+    background: #50627F;
+    color: white;
+    text-align: center;
+    height: 24px;
+    line-height:22px;
+    border-radius:4px;
+	text-decoration: none;
+}

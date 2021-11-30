@@ -138,7 +138,7 @@
 				    		</div>
 				  		</div>
   		<!-- 슬라이드 오른쪽, 왼쪽 버튼 -->
-  						<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  						<button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"">
     						<img alt="" src="./image/left.png" style="width:80px;">
     						<span class="visually-hidden">Previous</span>
   						</button>

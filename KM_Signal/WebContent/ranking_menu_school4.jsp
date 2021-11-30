@@ -11,8 +11,9 @@
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 
 	<!-- css -->
-	<link rel="stylesheet" href="./css/map_menu.css">
-	
+	<link rel = "stylesheet" href = "./css/sub_header.css">
+	<link rel = "stylesheet" href="./css/table_style.css">
+		
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css ">
       <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 

@@ -36,6 +36,7 @@ ul:after{
 li {
     float: left;
 }
+
 li a {
     display: block;
     color: white;
@@ -62,10 +63,8 @@ li a:hover:not(.active) {
 }
 
 
-
 .container {
-	width: 1200px;
-	max-width : none !important;
+	width: 1000px;
 }
 
 .card-body {
@@ -77,5 +76,6 @@ li a:hover:not(.active) {
 }
 
 .bg-primary {
+	color: white;
 	opacity : 1;
 }
