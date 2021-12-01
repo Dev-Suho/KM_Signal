@@ -1,29 +1,46 @@
 @charset "UTF-8";
+.info{
+	width:180px;
+	height:auto;
+	
+}
 
 .info-title {
     display: block;
-    background: #50627F;
+    background: #FF8B8B;
     color: #fff;
     text-align: center;
-    height: 24px;
+    height: auto;
     line-height:22px;
     border-radius:4px;
     padding:0px 0px;
 }
 
+.info-body {
+    display: block;
+    background: #F9F7E8;
+    font-family : TmonMonsori, "GodoB","굴림";
+    font-Weight: bold;
+    color: black;
+    text-align: center;
+    height: 30px;
+    line-height:22px;
+    padding:0px 0px;
+}
+
 .info-sub {
     display: block;
-    background: #50627F;
-    color: #fff;
+    background: #F9F7E8;
+    color: black;
     text-align: center;
-    height: 24px;
+    height: auto;
     line-height:22px;
     padding:0px 0px;
 }
 
 .info-button a {
     display: block;
-    background: #50627F;
+    background: #61BFAD;
     color: white;
     text-align: center;
     height: 24px;

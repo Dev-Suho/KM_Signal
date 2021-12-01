@@ -32,7 +32,7 @@ $(document).ready(function() {
 	    });
 	    // 데이터를 가져오기 위해 jQuery를 사용합니다
 	    // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
-	    $.get("resources/gyeonggi-do_high_school16.json", function(data) {
+	    $.get("resources/gyeonggi-do_high_school20.json", function(data) {
 	        // 데이터에서 좌표 값을 가지고 마커를 표시합니다
 	        // 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
 	        var markers = $(data.positions).map(function(i, position) {
@@ -42,9 +42,9 @@ $(document).ready(function() {
 	            });
 	            
 	            var infowindow = new kakao.maps.InfoWindow({
-	                content : '<div class = "info-title"><strong>'+ position.high_school_name +
-	                '</strong></div><hr><div class = "info-sub">'+ position.applicant +'</div>'+
-	                '<div class = "info-sub">'+ position.major_applicant +'</div><br><div class = "info-button"><a href="ranking.jsp?pageChange=ranking_menu_department1.jsp">이동</a></div>',
+	                content : '<div class ="info"><div class = "info-title"><strong>'+ position.high_school_name +
+	                '</strong></div><div class = "info-body">'+ position.applicant +'</div>'+
+	                '<div class = "info-sub">'+ position.major_applicant +'</div><div class = "info-button"><a href="ranking.jsp?pageChange=ranking_menu_department1.jsp">이동</a></div></div>',
 	                removable : true
 	            });
 	            
