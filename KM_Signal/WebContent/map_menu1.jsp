@@ -45,16 +45,16 @@ $(document).ready(function() {
 	                content : '<div class ="info"><div class = "info-title"><strong>'+ position.high_school_name +
 	                '</strong></div><div class = "info-body">'+ position.applicant +'</div>'+
 	                '<div class = "info-sub">'+ position.major_applicant +'</div><div class = "info-button"><a href="ranking.jsp?pageChange=ranking_menu_department1.jsp">이동</a></div></div>',
-	                removable : true
 	            });
 	            
-           				 
-	            kakao.maps.event.addListener(marker, 'click', function() {
-	            	
-	            	// 마커 위에 인포윈도우를 표시합니다
-			        infowindow.open(map, marker);
-			    });
-
+	            kakao.maps.event.addListener(marker, 'mouseover', function() {
+	            	    infowindow.open(map, marker);
+	            	});
+	            
+	            kakao.maps.event.addListener(map, 'click', function() {
+	                // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+	                infowindow.close();
+	            });
 	        	return marker;
 	            
 	        });
